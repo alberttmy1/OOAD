@@ -1,0 +1,59 @@
+Enter a number: 
+1
+[1.0]
+Enter a number: 
+2
+[1.0, 2.0]
+Enter a number: 
+3
+[1.0, 2.0, 3.0]
+Enter a number: 
+4
+[1.0, 2.0, 3.0, 4.0]
+Enter a number: 
+4
+[1.0, 2.0, 3.0, 4.0, 4.0]
+Enter a number: 
+
+Median: 3.0
+Mean: 2.8
+Mode: [4.0]
+Variance: 1.3599999999999999
+Standard Deviation:1.16619037896906
+Min:1.0
+Max:4.0
+Maximum Occurrences:[4.0]
+Which has a count of: 2.0
+
+
+Enter a number: 
+2.2
+[2.2]
+Enter a number: 
+1.33
+[2.2, 1.33]
+Enter a number: 
+1.33
+[2.2, 1.33, 1.33]
+Enter a number: 
+2.2
+[2.2, 1.33, 1.33, 2.2]
+Enter a number: 
+1.6
+[2.2, 1.33, 1.33, 2.2, 1.6]
+Enter a number: 
+5.8
+[2.2, 1.33, 1.33, 2.2, 1.6, 5.8]
+Enter a number: 
+
+Median: 1.9000000000000001
+Mean: 2.41
+Mode: [1.33, 2.2]
+Variance: 2.4281999999999995
+Standard Deviation:1.558268269586466
+Min:1.33
+Max:5.8
+Maximum Occurrences:[1.33, 2.2]
+Which has a count of: 2.0
+
+

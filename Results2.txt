@@ -1,0 +1,13 @@
+Enter a string: 
+Bruce
+BRUCE
+BCERU
+URECBCERU
+
+
+
+Enter a string: 
+Albert Tamayo
+ALBERTTAMAYO
+AAABELMORTTY
+YTTROMLEBAAAAABELMORTTY
