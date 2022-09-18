@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba28d7d9-1ff6-4dc2-9c95-222a2d8e3c59" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/project1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project1/Results1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Results2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project1/Results2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo3_out/demo3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project1/demo3_out/demo3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo3_out/src/Analyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/demo3_out/src/Analyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo3_out/src/Analyzerpt2.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/demo3_out/src/Analyzerpt2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo3_out/src/project1.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/demo3_out/src/project1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo3_out/src/project1_pt2.java" beforeDir="false" afterPath="$PROJECT_DIR$/project1/demo3_out/src/project1_pt2.java" afterDir="false" />
-    </list>
+    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +10,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2EPiVqcjAq46kkjdxShINpZ7w07" />
+  <component name="ProjectId" id="2ExU9wOj22h21YzaBluCzlAdbHU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,37 +19,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "jdk.selected.JAVA_MODULE": "14",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="OOAD" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="OOAD" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba28d7d9-1ff6-4dc2-9c95-222a2d8e3c59" name="Changes" comment="" />
-      <created>1662503647214</created>
+      <changelist id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="" />
+      <created>1663536580448</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662503647214</updated>
+      <updated>1663536580448</updated>
     </task>
     <servers />
   </component>
@@ -69,19 +38,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
