@@ -4,7 +4,7 @@ public class Adventurers_stats {
     private String name;
     private int id;
     private int atk;
-    private String loc;
+    private int[] loc;
     private int treasure;
 
     public Adventurers_stats(int num){
