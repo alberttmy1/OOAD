@@ -10,7 +10,7 @@ public class Facility {
         //heroLoc = {z,y,x}
 
         if(heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
-            heroLoc[0] = heroLoc[0] - 1;
+            heroLoc[0] = heroLoc[0] + 1;
             return heroLoc;
         }
 
@@ -139,6 +139,7 @@ public class Facility {
         }
         return (heroLoc);
     }
+
     public int[][] creaturesSpawn() {
         int x = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
         int y = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
