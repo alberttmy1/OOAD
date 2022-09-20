@@ -11,7 +11,6 @@ public class Adventurers_stats {
         hp  = 3;
         atk = 1;
         treasure = 0;
-        loc = "0-1-1";
         if(num == 1){
             name = "Brawlers";
             id = 1;
@@ -31,7 +30,7 @@ public class Adventurers_stats {
     }
 
     //return the spawn coordinates
-    public String getSpawn(){
+    public int[] getSpawn(){
         return loc;
     }
 
@@ -40,7 +39,7 @@ public class Adventurers_stats {
         hp = health;
     }
 
-    public void setSpawn(String place){
+    public void setSpawn(int[] place){
         loc = place;
     }
 

@@ -4,7 +4,7 @@ public class Creatures_stats {
     private int hp;
     private String name;
     private int id;
-    private String loc;
+    private int[] loc;
 
     //Initialize the Object
     public Creatures_stats(int num){
@@ -27,7 +27,7 @@ public class Creatures_stats {
     }
 
     //return the spawn coordinates
-    public String getSpawn(){
+    public int[] getSpawn(){
         return loc;
     }
 
@@ -37,7 +37,7 @@ public class Creatures_stats {
     }
 
     //set the spawn
-    public void setSpawn(String place){
+    public void setSpawn(int[] place){
         loc = place;
     }
 
