@@ -3,20 +3,16 @@ import java.util.Random;
 public class Facility {
 
     public int[] heroMove(int[] heroPlace) {
-        int z = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
-        int y = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
-        int x = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
-        int ns = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
-        int ew = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
-        int du = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
         int direction = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
-        int directionCenter = (int) Math.floor(Math.random() * (3 - 0 + 1) + 0);
-        int moveSpaceCenter = (int) Math.floor(Math.random() * (3 - 0 + 1) + 0);
         int moveSpace = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
         int[] heroLoc = heroPlace;
 
         //heroLoc = {z,y,x}
 
+        if(heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
+            heroLoc[0] = heroLoc[0] - 1;
+            return heroLoc;
+        }
 
         // if n/s
         if(direction == 0){
@@ -28,14 +24,14 @@ public class Facility {
                 }
                 //if north
                 else{
-                    //re do direction
+                    heroMove(heroPlace);
                 }
             }
             else if (heroLoc[1] == 0){
 
                 // if S
                 if (moveSpace == 0) {
-                    // re do direction
+                    heroMove(heroPlace);
                 }
                 // if N
                 else{
@@ -61,56 +57,67 @@ public class Facility {
             // if center
             if(heroLoc[1] == 1 && heroLoc[2] == 1){
                 // if up/down(level)
-                if(directionCenter == 0) {
-                    if (heroLoc[0] == 4) {
-                        // if down
-                        if (moveSpace == 0) {
-                            heroLoc[0] = heroLoc[0] - 1;
-                            return heroLoc;
-                        }
-                        //if up
-                        else if (moveSpaceCenter == 1) {
-                            // redo movement
-                        }
+                if (heroLoc[0] == 4) {
+                    // if down
+                    if (moveSpace == 0) {
+                        heroLoc[0] = heroLoc[0] - 1;
+                        return heroLoc;
                     }
-                    if (heroLoc[0] == 0) {
-                        // if down
-                        if (moveSpace == 0) {
-                            // redo movement
+                    //if up
+                    else if (moveSpace == 1) {
+                        heroMove(heroPlace);
+                    }
+                }
+                else if (heroLoc[0] == 1) {
+                    // if down
+                    if (moveSpace == 0) {
+                        heroMove(heroPlace);
 
-                        }
-                        //if up
-                        else if (moveSpaceCenter == 1) {
-                            heroLoc[0] = heroLoc[0] + 1;
-                            return heroLoc;
-                        }
+                    }
+                    //if up
+                    else if (moveSpace == 1) {
+                        heroLoc[0] = heroLoc[0] + 1;
+                        return heroLoc;
+                    }
+                }
+                else if (heroLoc[0] >= 2 || heroLoc[0] <= 3 ) {
+                    // if down
+                    if (moveSpace == 0) {
+                        heroLoc[0] = heroLoc[0] - 1;
+                        return heroLoc;
+
+                    }
+                    //if up
+                    else if (moveSpace == 1) {
+                        heroLoc[0] = heroLoc[0] + 1;
+                        return heroLoc;
                     }
                 }
             }
             else{
-                //redo movment
+                heroMove(heroPlace);
             }
         }
         // if E/W
         else{
             if (heroLoc[2] == 2) {
-                // if E
+                // if w
                 if (moveSpace == 0) {
                     heroLoc[2] = heroLoc[2] - 1;
                     return heroLoc;
                 }
-                //if W
+                //if E
                 else{
-                    //re do direction
+                    heroMove(heroPlace);
                 }
             }
             else if (heroLoc[2] == 0){
 
-                // if E
-                if (moveSpace == 0) {
-                    // re do direction
-                }
                 // if W
+                if (moveSpace == 0) {
+                    heroMove(heroPlace);
+                }
+                // if E
                 else{
                     heroLoc[2] = heroLoc[2] + 1;
                     return heroLoc;
@@ -118,12 +125,12 @@ public class Facility {
             }
             else if (heroLoc[2] == 1){
 
-                // if E
-                if (moveSpace == 0) {
+                // if W
+                if(moveSpace == 0) {
                     heroLoc[2] = heroLoc[2] - 1;
                     return heroLoc;
                 }
-                // if W
+                // if E
                 else{
                     heroLoc[2] = heroLoc[2] + 1;
                     return heroLoc;
@@ -131,6 +138,19 @@ public class Facility {
             }
         }
         return (heroLoc);
+    }
+    public int[][] creaturesSpawn() {
+        int x = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+        int y = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+        int z = (int) Math.floor(Math.random() * (4 - 1 + 1) + 1);
+        int[] orbiter_Spawn = new int[3];
+        if(x != 1 && y !=1){
+            orbiter_Spawn = new int[]{z, y, x};
+        }
+        int[] seekers_Spawn = new int[]{z,y,x};
+        int[] blinkers_Spawn = new int[]{4,y,x};
+        int[][] creatureS = {seekers_Spawn,blinkers_Spawn,orbiter_Spawn};
+        return creatureS;
     }
 
     /*
