@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="day2">
+      <change afterPath="$PROJECT_DIR$/Project2/src/Map.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project2/src/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Adventurers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Creatures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
+    </list>
+    <list id="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" name="Changes by alberttamayo" comment="">
       <change beforePath="$PROJECT_DIR$/Project2/src/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Facility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
     </list>
@@ -28,26 +36,30 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/Project2/src/Facility.java">
       <ranges>
-        <range start1="5" end1="11" start2="5" end2="5" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="12" end1="14" start2="6" end2="6" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="19" end1="19" start2="11" end2="15" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="30" end1="31" start2="26" end2="27" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="37" end1="38" start2="33" end2="34" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="63" end1="74" start2="59" end2="80" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="75" end1="79" start2="81" end2="87" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="80" end1="86" start2="88" end2="93" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="90" end1="91" start2="97" end2="98" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="96" end1="97" start2="103" end2="104" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="101" end1="102" start2="108" end2="109" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="103" end1="104" start2="110" end2="111" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="108" end1="109" start2="115" end2="116" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="110" end1="111" start2="117" end2="118" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="112" end1="113" start2="119" end2="120" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="120" end1="122" start2="127" end2="129" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="125" end1="126" start2="132" end2="133" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="134" end1="134" start2="141" end2="154" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="152" end1="153" start2="172" end2="174" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="182" end1="183" start2="203" end2="207" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="2" end1="2" start2="2" end2="3" changelist="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" />
+        <range start1="5" end1="5" start2="6" end2="7" changelist="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" />
+        <range start1="12" end1="13" start2="14" end2="15" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
+        <range start1="139" end1="140" start2="141" end2="142" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="141" end1="141" start2="143" end2="144" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
+        <range start1="155" end1="166" start2="158" end2="163" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="167" end1="169" start2="164" end2="166" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="170" end1="189" start2="167" end2="167" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="190" end1="190" start2="168" end2="181" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="191" end1="191" start2="182" end2="189" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="192" end1="208" start2="190" end2="201" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="210" end1="210" start2="203" end2="204" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="211" end1="211" start2="205" end2="237" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/Project2/src/GameEngine.java">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="2" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="5" end1="5" start2="6" end2="7" changelist="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" />
+        <range start1="11" end1="11" start2="13" end2="18" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="18" end1="18" start2="25" end2="34" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="24" end1="27" start2="40" end2="43" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="38" end1="40" start2="54" end2="75" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="41" end1="42" start2="76" end2="107" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
       </ranges>
     </file>
   </component>
@@ -71,8 +83,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Adventurers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Adventurers" />
+    <configuration name="main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="main" />
       <module name="project2.2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -80,7 +92,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Adventurers" />
+        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>

@@ -139,7 +139,7 @@ public class Facility {
                 }
             }
         }
-        return (heroLoc);
+        return heroLoc;
     }
 
     public int[][] creaturesSpawn() {
@@ -156,61 +156,84 @@ public class Facility {
         return creatureS;
     }
 
-    /*
-    ****
-    map: 3D object
-    first(int) - level
-    second(int[]) - room location
-    third(String) - people in that room
-    ****
-        object[0][1][0] = 0-1-1
-         object[1][0][0] = Level 1
-         object[1][1][0] = 1-0-0
-         object[1][2][0] = 1-0-1
+    public int[] blinkersMove(int[][] cSpawn, int[] heroLoc){
+        int z = cSpawn[1][0];
+        int y = cSpawn[1][1];
+        int x = cSpawn[1][2];
+        int[] temp = new int[3];
 
-     */
-    private Object[][][] map = new Object[5][9][5];
+        if(z == heroLoc[0] && y == heroLoc[1] && x == heroLoc[2]){
+            //battle
 
-    public Facility(){
-        //initiate first floor and heroes
-        int[] start = {0,1,1};
-        map[0][1][0] = start;
-        map[0][0][0] = "B";
-        map[0][0][1] = "S";
-        map[0][0][2] = "R";
-        map[0][0][3] = "T";
+        }
+        else{
+            int tempX = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+            int tempY = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+            int tempZ = (int) Math.floor(Math.random() * (4 - 1 + 1) + 1);
 
-        //maps out floors 1 - 4
-        for(int i = 1; i < 4; i++){
-            int room = 0;
-            for(int j = 0; j < 3; j++){
-                for(int k = 0; k < 3; k++){
-                    room += 1;
-                    int[] temp = {i,j,k};
-                    map[i][room][0] = temp;
-                }
+            z = tempZ;
+            y = tempY;
+            x = tempX;
+
+            temp = new int[]{z, y, x};
+            return temp;
+        }
+        return temp;
+    }
+    public int[] orbitorsMove(int[][] cSpawn, int[] heroLoc) {
+        int z = cSpawn[2][0];
+        int y = cSpawn[2][1];
+        int x = cSpawn[2][2];
+        int[] temp = new int[3];
+        if (z == heroLoc[0] && y == heroLoc[1] && x == heroLoc[2]) {
+            //battle
+
+        } else {
+            int tempX = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+            int tempY = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+            y = tempY;
+            x = tempX;
+            temp = new int[3];
+            if (y == 1 && x == 1) {
+                orbitorsMove(cSpawn, heroLoc);
+            } else {
+                temp = new int[]{z, y, x};
+                return temp;
             }
         }
+        return temp;
     }
+    public int[] seekersMove(int[][] cSpawn, int[] heroLoc) {
+        int z = cSpawn[0][0];
+        int y = cSpawn[0][1];
+        int x = cSpawn[0][2];
+        int[] temp = new int[3];
+        if (z == heroLoc[0] && y == heroLoc[1] && x == heroLoc[2]) {
+            //battle
 
-    /*
-       map print out example round 0:
-       0-1-1: B,S,R,T : -
-       1-0-0: - : -       1-0-1: - : -      1-0-2: - : -
-       1-1-0: - : -       1-1-1: - : -      1-1-2: - : -
-     */
-    public void draw(){
-
-        for(int i = 0; i < 5; i++){
-            for(int j = 0; j < 3; j++){
-                for(int k = 0; k < 3; k++){
-                    if(k == 0 && j == 0){
-                        Object room = map[i][j][k];
-                        System.out.printf("%s %s\n");
-                    }
-                }
-            }
         }
+        else if(z == heroLoc[0] && (y <2 &&(y +1 == (heroLoc[1])) || (x < 2 && (x+1 == (heroLoc[2]))))){
+            y = heroLoc[1];
+            x = heroLoc[2];
+            // battle
+            temp = new int[]{z, y, x};
+            return temp;
+        }
+        else if(z == heroLoc[0] && ((y>0 && (y - 1 == (heroLoc[1]))) || (x>0 && (x-1 == (heroLoc[2]))))){
+            y = heroLoc[1];
+            x = heroLoc[2];
+            // battle
+            temp = new int[]{z, y, x};
+            return temp;
+        }
+        else {
+            temp = new int[]{z, y, x};
+            return temp;
+        }
+        return temp;
     }
+    
+    
+
 
 }
