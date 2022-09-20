@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Arrays;
 public class Facility {
 
     public int[] heroMove(int[] heroPlace) {
+        System.out.println("hero: " + Arrays.toString(heroPlace));
         int direction = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
         int moveSpace = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
         int[] heroLoc = heroPlace;

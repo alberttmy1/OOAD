@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class GameEngine {
 
     void run(){
+        Facility move = new Facility();
         //initializing the game and game ending variables
         int money = 0;
         int enemies = 12;
