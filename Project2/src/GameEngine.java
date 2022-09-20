@@ -33,12 +33,6 @@ public class GameEngine {
         for(int i = 0; i < 5; i++) {
             for (int k = 0; k < 4; k++) {
                 monsters.add(new Creatures_stats(k));
-                //random spawn points
-                int z = (int)Math.floor(Math.random()*(maxf-minf+1)+minf);
-                int y = (int)Math.floor(Math.random()*(maxD-minD+1)+minD);
-                int x = (int)Math.floor(Math.random()*(maxD-minD+1)+minD);
-                int[] tempLoc = {z,y,x};
-                monsters.get(i*k).setSpawn(tempLoc);
             }
         }
 

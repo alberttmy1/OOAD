@@ -170,7 +170,8 @@ public class Facility {
 
     public Facility(){
         //initiate first floor and heroes
-        map[0][1][0] = new int[] {0,1,1};
+        int[] start = {0,1,1};
+        map[0][1][0] = start;
         map[0][0][0] = "B";
         map[0][0][1] = "S";
         map[0][0][2] = "R";
@@ -200,7 +201,10 @@ public class Facility {
         for(int i = 0; i < 5; i++){
             for(int j = 0; j < 3; j++){
                 for(int k = 0; k < 3; k++){
-                    System.out.printf("%-10s %s\n");
+                    if(k == 0 && j == 0){
+                        Object room = map[i][j][k];
+                        System.out.printf("%s %s\n");
+                    }
                 }
             }
         }
