@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="test">
-      <change beforePath="$PROJECT_DIR$/Project2/src/Adventurers_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Adventurers_stats.java" afterDir="false" />
+    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="test_3">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/battle.java" afterDir="false" />
     </list>
     <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
+    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="">
+      <change beforePath="$PROJECT_DIR$/Project2/src/Adventurers_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Adventurers_stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Creatures_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Creatures_stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663538195324</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test_3">
+      <created>1663628876164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663628876164</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test_3">
+      <created>1663628953831</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663628953831</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,6 +130,7 @@
     <MESSAGE value="sdd" />
     <MESSAGE value="123" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="test_3" />
   </component>
 </project>
