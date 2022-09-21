@@ -12,10 +12,12 @@ public class Creatures_stats {
         if(num == 1){
             name = "Orbitor";
             id = 1;
-        } else if (num == 2) {
+        }
+        if (num == 2) {
             name = "Seekers";
             id = 2;
-        }else{
+        }
+        if(num == 3){
             name = "Blinkers";
             id = 3;
         }

@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="day2">
-      <change afterPath="$PROJECT_DIR$/Project2/src/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project2/src/main.java" afterDir="false" />
+    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="Kevin macbook">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/Adventurers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/Creatures.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Adventurers_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Adventurers_stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/Creatures_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Creatures_stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
     </list>
-    <list id="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" name="Changes by alberttamayo" comment="">
+    <list id="04c6220a-9df8-4078-a5d3-0a5c315ae763" name="Changes by alberttamayo" comment="">
       <change beforePath="$PROJECT_DIR$/Project2/src/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Facility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
     </list>
     <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
-    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Albert Code">
-      <change beforePath="$PROJECT_DIR$/Project2/src/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/Facility.java" afterDir="false" />
-    </list>
+    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Alber Desktop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,36 +26,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Project2/src/Facility.java">
-      <ranges>
-        <range start1="2" end1="2" start2="2" end2="3" changelist="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" />
-        <range start1="12" end1="13" start2="14" end2="15" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="139" end1="140" start2="141" end2="142" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="141" end1="141" start2="143" end2="144" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="155" end1="166" start2="158" end2="163" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="167" end1="169" start2="164" end2="166" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="170" end1="189" start2="167" end2="167" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="190" end1="190" start2="168" end2="181" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="191" end1="191" start2="182" end2="189" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="192" end1="208" start2="190" end2="201" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="210" end1="210" start2="203" end2="204" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="211" end1="211" start2="205" end2="237" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/Project2/src/GameEngine.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="2" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="5" end1="5" start2="6" end2="7" changelist="2dc3dc4c-be03-44cf-b15a-24cd0e5aef86" />
-        <range start1="11" end1="11" start2="13" end2="18" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="18" end1="18" start2="25" end2="34" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="24" end1="27" start2="40" end2="43" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="38" end1="40" start2="54" end2="75" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="41" end1="42" start2="76" end2="107" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -161,7 +125,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663644177101</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Alber Desktop">
+      <created>1663715161555</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663715161555</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by alberttamayo">
+      <created>1663715180418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1663715180419</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Kevin macbook">
+      <created>1663715204141</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663715204142</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +168,9 @@
     <MESSAGE value="update day2" />
     <MESSAGE value="Albert Code" />
     <MESSAGE value="day2" />
-    <option name="LAST_COMMIT_MESSAGE" value="day2" />
+    <MESSAGE value="Alber Desktop" />
+    <MESSAGE value="Changes by alberttamayo" />
+    <MESSAGE value="Kevin macbook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kevin macbook" />
   </component>
 </project>

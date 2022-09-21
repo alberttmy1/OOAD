@@ -38,6 +38,9 @@ public class Adventurers_stats {
     public void setHP(int health){
         hp = health;
     }
+    public int getHP(){
+        return hp;
+    }
 
     public void setSpawn(int[] place){
         loc = place;
@@ -45,6 +48,6 @@ public class Adventurers_stats {
 
     public Integer getTreasure(){return treasure;}
 
-    public void setTreasure(int money){ treasure = money;}
+    public void setTreasure(int money){ treasure += money;}
 
 }
