@@ -191,13 +191,10 @@ public class Facility {
         }
     }
 
-    public int[] orbitorsMove2(int[]  creaturePlace, int[] heroLoc) {
+    public int[] orbitorsMove2(int[]  creaturePlace, boolean flight) {
         int z = creaturePlace[0];
-        int y = creaturePlace[1];
-        int x = creaturePlace[2];
 
-        if(z == heroLoc[0] && y == heroLoc[1] && x == heroLoc[2]){
-
+        if(flight){
             return creaturePlace;
         }else{
             int tempX = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
@@ -233,11 +230,15 @@ public class Facility {
             return temp;
         }
     }
-    public int getTresure(){
-        int dice_1 = (int) Math.floor(Math.random() * (6 - 1 + 1) + 0);
-        int dice_2 = (int) Math.floor(Math.random() * (6 - 1 + 1) + 0);
+    public int getTresure(int id){
+        int dice_1 = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
+        int dice_2 = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
+        int sum = dice_1 + dice_2;
 
-        if((dice_1 + dice_2) > 10){
+        if(id == 4){
+            sum += 1;
+        }
+        if(sum >= 10){
             return 1;
         }
         else{

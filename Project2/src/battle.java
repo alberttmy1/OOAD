@@ -15,12 +15,7 @@ public class battle{
             return combat(heroRolls, monstRolls);
         }
         else if(id == 2){
-            Random rand = new Random();
-            if(rand.nextBoolean()){
-                return 0;
-            }else{
-                return combat(heroRolls, monstRolls);
-            }
+            return combat(heroRolls, monstRolls);
 
         } else if (id == 3) {
             return combat(heroRolls, monstRolls);
