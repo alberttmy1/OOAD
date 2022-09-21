@@ -168,16 +168,14 @@ public class Facility {
 
     }
 
-    public int[] blinkersMove(int[] creaturePlace, int[] heroLoc){
+    public int[] blinkersMove(int[] creaturePlace, boolean flight){
         int z =  creaturePlace[0];
         int y =  creaturePlace[1];
         int x =  creaturePlace[2];
         int[] temp = new int[3];
 
-        if(z == heroLoc[0] && y == heroLoc[1] && x == heroLoc[2]){
-            temp = new int[]{z, y, x};
-            return temp;
-
+        if(flight){
+            return creaturePlace;
         }
         else{
             int tempX = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
@@ -245,5 +243,14 @@ public class Facility {
         else{
             return 0;
         }
+    }
+
+    public int chance(){
+        int chance = (int) Math.floor(Math.random() * (2- 1 + 1) + 1);
+
+        if(chance == 1){
+            return chance;
+        }
+        return chance;
     }
 }

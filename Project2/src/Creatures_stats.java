@@ -38,6 +38,9 @@ public class Creatures_stats {
         hp = health;
     }
 
+    public int getHP(){
+        return hp;
+    }
     //set the spawn
     public void setSpawn(int[] place){
         loc = place;

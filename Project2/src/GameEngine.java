@@ -60,7 +60,15 @@ public class GameEngine {
         }
 
         //money != 10 || enemies != 0 || hero !=0)
-        while(round != 5){
+        while(money  < 10 && enemies > 0 && hero > 0){
+//            System.out.println(money);
+//            System.out.println(enemies);
+//            System.out.println(hero);
+
+            boolean BMove = true;
+            boolean SMove = true;
+            boolean RMove = true;
+            boolean TMove = true;
 
             //Roll for treasure
             for(int j = 0; j < 12;j++){
@@ -72,8 +80,8 @@ public class GameEngine {
                 Brawler.setTreasure(move.getTresure());
             }
             casino = true;
-            for(int j = 0; j < 12;j++){
-                if(Arrays.equals(Sneaker.getSpawn(), monsters.get(j).getSpawn())){
+            for (int j = 0; j < 12; j++) {
+                if (Arrays.equals(Sneaker.getSpawn(), monsters.get(j).getSpawn())) {
                     casino = false;
                 }
             }
@@ -81,8 +89,8 @@ public class GameEngine {
                 Sneaker.setTreasure(move.getTresure());
             }
             casino = true;
-            for(int j = 0; j < 12;j++){
-                if(Arrays.equals(Runner.getSpawn(), monsters.get(j).getSpawn())){
+            for (int j = 0; j < 12; j++) {
+                if (Arrays.equals(Runner.getSpawn(), monsters.get(j).getSpawn())) {
                     casino = false;
                 }
             }
@@ -90,8 +98,8 @@ public class GameEngine {
                 Runner.setTreasure(move.getTresure());
             }
             casino = true;
-            for(int j = 0; j < 12;j++){
-                if(Arrays.equals(Thief.getSpawn(), monsters.get(j).getSpawn())){
+            for (int j = 0; j < 12; j++) {
+                if (Arrays.equals(Thief.getSpawn(), monsters.get(j).getSpawn())) {
                     casino = false;
                 }
             }
@@ -100,57 +108,57 @@ public class GameEngine {
             }
 
             System.out.println("Turn: " + round);
-            for(int i =0; i < floor0.length; i++){
-                System.out.print(floor0[i][0]+"-"+floor0[i][1]+"-"+floor0[i][2]+": ");
-                if(Arrays.equals(Brawler.getSpawn(), floor0[i])){
+            for (int i = 0; i < floor0.length; i++) {
+                System.out.print(floor0[i][0] + "-" + floor0[i][1] + "-" + floor0[i][2] + ": ");
+                if (Arrays.equals(Brawler.getSpawn(), floor0[i])) {
                     System.out.print("B, ");
                 }
-                if (Arrays.equals(Sneaker.getSpawn(), floor0[i])){
+                if (Arrays.equals(Sneaker.getSpawn(), floor0[i])) {
                     System.out.print("S, ");
                 }
                 if (Arrays.equals(Runner.getSpawn(), floor0[i])) {
                     System.out.print("R, ");
                 }
-                if (Arrays.equals(Thief.getSpawn(), floor0[i])){
+                if (Arrays.equals(Thief.getSpawn(), floor0[i])) {
                     System.out.print("T, ");
-                }else{
+                } else {
                     System.out.print("e");
                 }
             }
             System.out.println("");
 
             //Print out floors 1-4
-            for(int j=0; j < 4; j++){
-                for(int k = 0; k < 9; k++){
-                    if (k % 3 == 0){
+            for (int j = 0; j < 4; j++) {
+                for (int k = 0; k < 9; k++) {
+                    if (k % 3 == 0) {
                         System.out.println("");
                     }
-                    String coor = test[j][k][0]+"-"+test[j][k][1]+"-"+test[j][k][2]+": ";
-                    if(Arrays.equals(Brawler.getSpawn(), test[j][k])){
+                    String coor = test[j][k][0] + "-" + test[j][k][1] + "-" + test[j][k][2] + ": ";
+                    if (Arrays.equals(Brawler.getSpawn(), test[j][k])) {
                         temp += "B, ";
                     }
-                    if (Arrays.equals(Sneaker.getSpawn(), test[j][k])){
+                    if (Arrays.equals(Sneaker.getSpawn(), test[j][k])) {
                         temp += "S, ";
                     }
                     if (Arrays.equals(Runner.getSpawn(), test[j][k])) {
                         temp += "R, ";
                     }
-                    if (Arrays.equals(Thief.getSpawn(), test[j][k])){
+                    if (Arrays.equals(Thief.getSpawn(), test[j][k])) {
                         temp += "T, ";
                     }
-                    for(int m = 0; m < 12; m++){
-                        if(Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 1){
+                    for (int m = 0; m < 12; m++) {
+                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 1) {
                             temp += "OB, ";
                         }
-                        if(Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 2){
+                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 2) {
                             temp += "SE, ";
                         }
-                        if(Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 3){
+                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 3) {
                             temp += "BL, ";
                         }
                     }
 
-                    System.out.printf("%s %-15s", coor, temp );
+                    System.out.printf("%s %-15s", coor, temp);
                     temp = "";
                 }
                 System.out.println("");
@@ -160,161 +168,177 @@ public class GameEngine {
                 if(monsters.get(i).getID() == 1){
                     if(Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn())){
                         int res = battle.fight(Brawler.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Brawler.setHP(Brawler.getHP() - 1);
-                            if(Brawler.getHP() == 0){
-                                Brawler.setSpawn(new int[]{0,0,0});
+                            if (Brawler.getHP() == 0) {
+                                Brawler.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Sneaker.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Sneaker.setHP(Sneaker.getHP() - 1);
-                            if(Sneaker.getHP() == 0){
-                                Sneaker.setSpawn(new int[]{0,0,0});
+                            if (Sneaker.getHP() == 0) {
+                                Sneaker.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Runner.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Runner.setHP(Runner.getHP() - 1);
-                            if(Runner.getHP() == 0){
-                                Runner.setSpawn(new int[]{0,0,0});
+                            if (Runner.getHP() == 0) {
+                                Runner.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Thief.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Thief.setHP(Thief.getHP() - 1);
-                            if(Thief.getHP() == 0){
-                                Thief.setSpawn(new int[]{0,0,0});
+                            if (Thief.getHP() == 0) {
+                                Thief.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
                     }
                 }
-                if(monsters.get(i).getID() == 2){
-                    if(Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn())){
+                if (monsters.get(i).getID() == 2) {
+                    if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Brawler.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Brawler.setHP(Brawler.getHP() - 1);
-                            if(Brawler.getHP() == 0){
-                                Brawler.setSpawn(new int[]{0,0,0});
+                            if (Brawler.getHP() == 0) {
+                                Brawler.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Sneaker.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Sneaker.setHP(Sneaker.getHP() - 1);
-                            if(Sneaker.getHP() == 0){
-                                Sneaker.setSpawn(new int[]{0,0,0});
+                            if (Sneaker.getHP() == 0) {
+                                Sneaker.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Runner.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
+
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Runner.setHP(Runner.getHP() - 1);
-                            if(Runner.getHP() == 0){
-                                Runner.setSpawn(new int[]{0,0,0});
+                            if (Runner.getHP() == 0) {
+                                Runner.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Thief.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Thief.setHP(Thief.getHP() - 1);
-                            if(Thief.getHP() == 0){
-                                Thief.setSpawn(new int[]{0,0,0});
+                            if (Thief.getHP() == 0) {
+                                Thief.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
                     }
                 }
-                if(monsters.get(i).getID() == 3){
-                    if(Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn())){
+                if (monsters.get(i).getID() == 3) {
+                    if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Brawler.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Brawler.setHP(Brawler.getHP() - 1);
-                            if(Brawler.getHP() == 0){
-                                Brawler.setSpawn(new int[]{0,0,0});
+                            if (Brawler.getHP() == 0) {
+                                Brawler.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Sneaker.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Sneaker.setHP(Sneaker.getHP() - 1);
-                            if(Sneaker.getHP() == 0){
-                                Sneaker.setSpawn(new int[]{0,0,0});
+                            if (Sneaker.getHP() == 0) {
+                                Sneaker.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
-                    }
-                    else if(Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn())){
+                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Runner.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0,0,0});
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Runner.setHP(Runner.getHP() - 1);
-                            if(Runner.getHP() == 0){
-                                Runner.setSpawn(new int[]{0,0,0});
+                            if (Runner.getHP() == 0) {
+                                Runner.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
                     }
                     else if(Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn())){
                         int res = battle.fight(Thief.getID());
-                        if(res == 1){
+                        if (res == 1) {
                             monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0,0,0});
+                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
+                            enemies--;
                         }
-                        if(res == 2){
+                        if (res == 2) {
                             Thief.setHP(Thief.getHP() - 1);
-                            if(Thief.getHP() == 0){
-                                Thief.setSpawn(new int[]{0,0,0});
+                            if (Thief.getHP() == 0) {
+                                Thief.setSpawn(new int[]{0, 0, 0});
+                                hero--;
                             }
                         }
                     }
