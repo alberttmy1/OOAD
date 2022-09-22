@@ -229,7 +229,6 @@ public class Facility {
             //makes sure its not in middle room
 
             if(tempX == 1 && tempY == 1){
-                //System.out.println("Bitch:" +tempX +tempY);
                 return new int[]{z, tempY+1, tempX};
             }
             return new int[]{z, tempY, tempX};
