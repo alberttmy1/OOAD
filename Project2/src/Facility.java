@@ -290,10 +290,12 @@ public class Facility {
 
     public int chance(){
         int chance = (int) Math.floor(Math.random() * (2- 1 + 1) + 1);
-
+        
+        //Sneaker fights
         if(chance == 1){
             return chance;
         }
+        //return 2 means Sneaker doesn't fight
         return chance;
     }
 }

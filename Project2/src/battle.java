@@ -1,15 +1,11 @@
 import java.util.Random;
-
-/*
-return 0 = tie or no dmg
-return 1 = creature dmg
-return 2 = hero dmg
- */
 public class battle{
+    //Output the results a fight and take in an id to determine the Adventure fighting
     public Integer fight(int id){
-        int heroRolls = diceRolls();
-        int monstRolls = diceRolls();
-
+        int heroRolls = diceRolls();    //the adventures roll
+        int monstRolls = diceRolls();   //the creatures roll
+        
+        //Determine which adventure is rolling and apply their advantages
         if(id == 1){
             heroRolls += 2;
             return combat(heroRolls, monstRolls);
@@ -24,7 +20,8 @@ public class battle{
             return combat(heroRolls, monstRolls);
         }
     }
-
+    
+    //Roll two dice and add them 
     private Integer diceRolls(){
         int maxDice = 1;
         int minDice = 6;
@@ -32,7 +29,13 @@ public class battle{
         int secondRoll = (int)Math.floor(Math.random()*(maxDice-minDice+1)+minDice);
         return firstRoll + secondRoll;
     }
-
+    
+    /*
+    *Determine who takes damage or no damage:
+    * 0 - both take zero damage 
+    * 1 - creature takes damage
+    * 2 - hero takes damage
+     */
     private Integer combat(int hero, int monst){
         if(hero > monst){
             return 1;
