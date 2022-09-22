@@ -1,6 +1,7 @@
 public class Creatures_stats {
 
     //Private variables
+    // This private members are an example of encapsulation
     private int hp;
     private String name;
     private int id;

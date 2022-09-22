@@ -35,7 +35,9 @@ public class GameEngine {
         int[][][] test = {floor1,floor2,floor3,floor4}; //floor, room coordinates, coordinates index
 
         //initialization of the characters
+        // This is an example of inheritance as each character is a category of adventurers
         Adventurers_stats Brawler = new Adventurers_stats(1);
+        //This is and example of identity as it distinguishes each adventurer's object by naming each adventurer
         Adventurers_stats Sneaker = new Adventurers_stats(2);
         Adventurers_stats Runner = new Adventurers_stats(3);
         Adventurers_stats Thief = new Adventurers_stats(4);
@@ -183,7 +185,9 @@ public class GameEngine {
                                 hero--;
                             }
                         }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
+                    }
+                    // if the monster and sneaker are in the same location and they are not in the graveyard then fight
+                    else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Sneaker.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
@@ -197,7 +201,9 @@ public class GameEngine {
                                 hero--;
                             }
                         }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
+                    }
+                    // The rest follow the same logic as above
+                    else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         int res = battle.fight(Runner.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
