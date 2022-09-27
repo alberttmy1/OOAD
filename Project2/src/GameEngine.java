@@ -5,8 +5,8 @@ public class GameEngine {
 
     void run(){
         //Initiate both Facility and battle class
-        Facility move = new Facility();
-        battle battle = new battle();
+        Facility3 move = new Facility3();
+        Dice battle3 = new Dice();
 
         //initializing the game and game ending variables
         int money = 0;
@@ -25,7 +25,7 @@ public class GameEngine {
         String temp = "";
 
         //Map initialization
-        Map tower = new Map();
+        Map3 tower = new Map3();
         int[][] floor0 = tower.lv0();
         int[][] floor1 = tower.lv1();
         int[][] floor2 = tower.lv2();
@@ -35,23 +35,23 @@ public class GameEngine {
 
         //initialization of the characters
         // This is an example of inheritance as each character is a category of adventurers
-        Adventurers_stats Brawler = new Adventurers_stats(1);
+        Adventurers_stats3 Brawler = new Adventurers_stats3(1);
         //This is and example of identity as it distinguishes each adventurer's object by naming each adventurer
-        Adventurers_stats Sneaker = new Adventurers_stats(2);
-        Adventurers_stats Runner = new Adventurers_stats(3);
-        Adventurers_stats Thief = new Adventurers_stats(4);
+        Adventurers_stats3 Sneaker = new Adventurers_stats3(2);
+        Adventurers_stats3 Runner = new Adventurers_stats3(3);
+        Adventurers_stats3 Thief = new Adventurers_stats3(4);
         Brawler.setSpawn(start);
         Sneaker.setSpawn(start1);
         Runner.setSpawn(start2);
         Thief.setSpawn(start3);
 
         //array to hold all creatures
-        ArrayList<Creatures_stats> monsters = new ArrayList<Creatures_stats>();
+        ArrayList<Creatures_stats3> monsters = new ArrayList<Creatures_stats3>();
 
         //initializing 12 creatures
         for(int i = 0; i < 4; i++) {
             for (int k = 1; k <= 3; k++) {
-                monsters.add(new Creatures_stats(k));
+                monsters.add(new Creatures_stats3(k));
             }
         }
         //Set the spawn for all Creatures
@@ -176,7 +176,7 @@ public class GameEngine {
                     //Checks to see if they are in the same room and if they are they can fight
                     if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
                         //Rolls dice and inputs Brawler buffs
-                        int res = battle.fight(Brawler.getID());
+                        int res = battle3.fight(Brawler.getID());
                         //if the creature dies then set its hp to zero and reduce the count of creatures
                         if (res == 1) {
                             monsters.get(i).setHP(0);
@@ -194,7 +194,7 @@ public class GameEngine {
                     }
                     // if the monster and sneaker are in the same location and they are not in the graveyard then fight
                     else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Sneaker.getID());
+                        int res = battle3.fight(Sneaker.getID());
                         // checks for 50% to leave or fight
                         int choice = move.chance();
                         if(choice == 1){
@@ -216,7 +216,7 @@ public class GameEngine {
                     }
                     // The rest follow the same logic as above
                     else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Runner.getID());
+                        int res = battle3.fight(Runner.getID());
                         //If the Runner kills the monster he can move
                         if (res == 1) {
                             monsters.get(i).setHP(0);
@@ -231,7 +231,7 @@ public class GameEngine {
                                 Runner.setSpawn(new int[]{0, 0, 0});
                                 hero--;
                             }
-                            res = battle.fight(Runner.getID());
+                            res = battle3.fight(Runner.getID());
                             if (res == 1) {
                                 monsters.get(i).setHP(0);
                                 monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -248,7 +248,7 @@ public class GameEngine {
                         }
                         //If the creature and runner tie he can try to fight him again
                         if (res == 0) {
-                            res = battle.fight(Runner.getID());
+                            res = battle3.fight(Runner.getID());
                             if (res == 1) {
                                 monsters.get(i).setHP(0);
                                 monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -265,7 +265,7 @@ public class GameEngine {
                         }
                     }//Same as logic as above for Orbitor
                     else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Thief.getID());
+                        int res = battle3.fight(Thief.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -283,7 +283,7 @@ public class GameEngine {
                 //The actions are the same as when a Adventure comes in contact with a Orbitor
                 if (monsters.get(i).getID() == 2) {
                     if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Brawler.getID());
+                        int res = battle3.fight(Brawler.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -297,7 +297,7 @@ public class GameEngine {
                             }
                         }
                     } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Sneaker.getID());
+                        int res = battle3.fight(Sneaker.getID());
                         int choice = move.chance();
                         if(choice == 1){
                             if (res == 1) {
@@ -314,7 +314,7 @@ public class GameEngine {
                             }
                         }
                     } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Runner.getID());
+                        int res = battle3.fight(Runner.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -327,7 +327,7 @@ public class GameEngine {
                                 Runner.setSpawn(new int[]{0, 0, 0});
                                 hero--;
                             }
-                            res = battle.fight(Runner.getID());
+                            res = battle3.fight(Runner.getID());
                             if (res == 1) {
                                 monsters.get(i).setHP(0);
                                 monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -343,7 +343,7 @@ public class GameEngine {
                             }
                         }
                         if (res == 0) {
-                            res = battle.fight(Runner.getID());
+                            res = battle3.fight(Runner.getID());
                             if (res == 1) {
                                 monsters.get(i).setHP(0);
                                 monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -359,7 +359,7 @@ public class GameEngine {
                             }
                         }
                     } else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Thief.getID());
+                        int res = battle3.fight(Thief.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -377,7 +377,7 @@ public class GameEngine {
                 //The actions are the same as when a adventure comes in contact with Orbitor
                 if (monsters.get(i).getID() == 3) {
                     if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Brawler.getID());
+                        int res = battle3.fight(Brawler.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -391,7 +391,7 @@ public class GameEngine {
                             }
                         }
                     } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Sneaker.getID());
+                        int res = battle3.fight(Sneaker.getID());
                         int choice = move.chance();
                         if(choice == 1){
                             if (res == 1) {
@@ -408,7 +408,7 @@ public class GameEngine {
                             }
                         }
                     } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Runner.getID());
+                        int res = battle3.fight(Runner.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -421,7 +421,7 @@ public class GameEngine {
                                 Runner.setSpawn(new int[]{0, 0, 0});
                                 hero--;
                             }
-                            res = battle.fight(Runner.getID());
+                            res = battle3.fight(Runner.getID());
                             if (res == 1) {
                                 monsters.get(i).setHP(0);
                                 monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -437,7 +437,7 @@ public class GameEngine {
                             }
                         }
                         if (res == 0) {
-                            res = battle.fight(Runner.getID());
+                            res = battle3.fight(Runner.getID());
                             if (res == 1) {
                                 monsters.get(i).setHP(0);
                                 monsters.get(i).setSpawn(new int[]{0, 0, 0});
@@ -453,7 +453,7 @@ public class GameEngine {
                             }
                         }
                     } else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle.fight(Thief.getID());
+                        int res = battle3.fight(Thief.getID());
                         if (res == 1) {
                             monsters.get(i).setHP(0);
                             monsters.get(i).setSpawn(new int[]{0, 0, 0});

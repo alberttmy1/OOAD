@@ -1,4 +1,4 @@
-﻿/Users/kevinloaiza/Library/Java/JavaVirtualMachines/openjdk-18.0.2.1/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=56865:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/kevinloaiza/Desktop/Object-Oriented/OOAD/out/production/project2.2 main
+﻿/Users/kevinloaiza/Library/Java/JavaVirtualMachines/openjdk-18.0.2.1/Contents/Home/bin/java -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=56865:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /Users/kevinloaiza/Desktop/Object-Oriented/OOAD/out/production/project2.2 main3
 Turn: 0
 0-1-1: B, S, R, T, 
 

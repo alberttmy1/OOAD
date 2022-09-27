@@ -1,4 +1,4 @@
 ﻿The output of endings:
-All Treasure found: 28
+All Treasure_stats found: 28
 All Creatures died: 2
 All Adventures died: 0
