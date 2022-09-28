@@ -1,7 +1,7 @@
 public class main {
     public static void main(String[] args){
         //initiate the game engine and run the game by calling run()
-        GameEngine3 r = new GameEngine3();
+        GameEngine r = new GameEngine();
         r.run();
 
         //Everything below is to run the game 30 times

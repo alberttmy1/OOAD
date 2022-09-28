@@ -1,9 +1,21 @@
 import java.util.List;
 public class Dice {
     //Output the results a fight and take in an id to determine the Adventure fighting
-    public Integer fight(int id){
+    public Integer fight(int id, List<String> items){
         int heroRolls = diceRolls();    //the adventures roll
         int monsterRolls = diceRolls();   //the creatures roll
+        
+        for(int i = 0; i < items.size(); i++){
+            if(items.get(i) == "Sword"){
+                heroRolls++;
+            }else if(items.get(i) == "Gem"){
+                monsterRolls++;
+            } else if (items.get(i) == "Armor") {
+                monsterRolls--;
+            } else if(items.get(i) == "Potion"){
+                monsterRolls++;
+            }
+        }
         
         //Determine which adventure is rolling and apply their advantages
         if(id == 1){

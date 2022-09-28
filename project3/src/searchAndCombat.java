@@ -1,15 +1,20 @@
 import java.util.Random;
-
+import java.util.List;
 public class searchAndCombat extends Dice {
 
-    public int combat(int id){
+    /*
+    ** out = 0 -> then no one took dmg
+    ** out = 1 -> then creature took dmg
+    ** out = 2 -> hero took dmg
+     */
+    public int combat(int id, List<String> inventory){
         //generate a random number between 0 and 1
         Random rand = new Random();
         int stealth = rand.nextInt(2);
 
         //determine the dice rolls and pass id to get each adventures specific combat advantage
         Dice c = new Dice();
-        int out = c.fight(id);
+        int out = c.fight(id, inventory);
 
         //will only apply to stealth combatant
         if(id == 3 && stealth == 0){

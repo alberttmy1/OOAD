@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class GameEngine {
+public class GameEngine{
 
     void run(){
         //Initiate both Facility and battle class
@@ -25,7 +25,7 @@ public class GameEngine {
         String temp = "";
 
         //Map initialization
-        Map3 tower = new Map3();
+        Map tower = new Map();
         int[][] floor0 = tower.lv0();
         int[][] floor1 = tower.lv1();
         int[][] floor2 = tower.lv2();

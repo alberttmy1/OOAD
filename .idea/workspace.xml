@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="Final Changes Kevin">
-      <change afterPath="$PROJECT_DIR$/project3/src/Celebrate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/project3/src/searchAndCombat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/MultipleGameRun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/MultipleGameRun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/SingleGameRun (1).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/SingleGameRun (1).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project2/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project2.2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/project2.2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src" beforeDir="false" />
-    </list>
-    <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="" />
-    <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
-    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Alber Desktop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/GameEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/GameEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project2/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project2/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/GameEngine3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/GameEngine3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Map3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/searchAndCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/searchAndCombat.java" afterDir="false" />
     </list>
+    <list id="d30f278f-529f-4f59-8aca-79c1170cc01d" name="Changes by alberttamayo" comment="">
+      <change beforePath="$PROJECT_DIR$/project3/src/Adventurers_stats3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Adventurers_stats3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/GameEngine3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/GameEngine3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Treasure_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Treasure_stats.java" afterDir="false" />
+    </list>
+    <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
+    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Alber Desktop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +32,36 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/project3/src/GameEngine3.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="3" end1="4" start2="4" end2="5" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="6" end1="7" start2="7" end2="8" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="8" end1="9" start2="9" end2="9" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="14" end1="15" start2="14" end2="14" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="28" end1="34" start2="27" end2="28" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="42" end1="42" start2="36" end2="37" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="87" end1="87" start2="82" end2="103" changelist="d30f278f-529f-4f59-8aca-79c1170cc01d" />
+        <range start1="89" end1="126" start2="105" end2="106" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="130" end1="133" start2="110" end2="113" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="135" end1="136" start2="115" end2="116" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="138" end1="139" start2="118" end2="119" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="141" end1="142" start2="121" end2="122" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="150" end1="151" start2="130" end2="131" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="206" end1="290" start2="186" end2="186" changelist="d30f278f-529f-4f59-8aca-79c1170cc01d" />
+        <range start1="291" end1="506" start2="187" end2="187" changelist="d30f278f-529f-4f59-8aca-79c1170cc01d" />
+        <range start1="537" end1="556" start2="218" end2="219" changelist="d30f278f-529f-4f59-8aca-79c1170cc01d" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/project3/src/Dice.java">
+      <ranges>
+        <range start1="0" end1="0" start2="0" end2="1" changelist="d30f278f-529f-4f59-8aca-79c1170cc01d" />
+        <range start1="2" end1="3" start2="3" end2="4" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+        <range start1="6" end1="6" start2="7" end2="19" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -235,7 +266,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/project3/src/GameEngine3.java</url>
-          <line>207</line>
+          <line>186</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

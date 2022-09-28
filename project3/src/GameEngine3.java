@@ -1,18 +1,17 @@
+import jdk.jshell.execution.LoaderDelegate;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class GameEngine3 {
+public class GameEngine3{
 
     void run(){
-        //Initiate both Facility and battle class
+        //Initiate Facility
         Facility3 move = new Facility3();
-        Dice battle3 = new Dice();
 
         //initializing the game and game ending variables
         int money = 0;
         int enemies = 12;
         int hero = 4;
-        boolean casino = true;
 
         //Default spawn locations
         int[] start = {0,1,1};
@@ -26,12 +25,7 @@ public class GameEngine3 {
 
         //Map initialization
         Map3 tower = new Map3();
-        int[][] floor0 = tower.lv0();
-        int[][] floor1 = tower.lv1();
-        int[][] floor2 = tower.lv2();
-        int[][] floor3 = tower.lv3();
-        int[][] floor4 = tower.lv4();
-        int[][][] test = {floor1,floor2,floor3,floor4}; //floor, room coordinates, coordinates index
+        int[][][] test = tower.allfloors(); //floor, room coordinates, coordinates index
 
         //initialization of the characters
         // This is an example of inheritance as each character is a category of adventurers
@@ -40,6 +34,7 @@ public class GameEngine3 {
         Adventurers_stats3 Sneaker = new Adventurers_stats3(2);
         Adventurers_stats3 Runner = new Adventurers_stats3(3);
         Adventurers_stats3 Thief = new Adventurers_stats3(4);
+
         Brawler.setSpawn(start);
         Sneaker.setSpawn(start1);
         Runner.setSpawn(start2);
@@ -108,59 +103,23 @@ public class GameEngine3 {
             }
 
             //Roll for treasure
-            casino = true;
-            for (int j = 0; j < 12; j++) {
-                if (Arrays.equals(Brawler.getSpawn(), monsters.get(j).getSpawn())) {
-                    casino = false;
-                }
-            }
-            if (casino) {
-                Brawler.setTreasure(move.getTresure(Brawler.getID()));
-            }
-            casino = true;
-            for (int j = 0; j < 12; j++) {
-                if (Arrays.equals(Sneaker.getSpawn(), monsters.get(j).getSpawn())) {
-                    casino = false;
-                }
-            }
-            if (casino) {
-                Sneaker.setTreasure(move.getTresure(Sneaker.getID()));
-            }
-            casino = true;
-            for (int j = 0; j < 12; j++) {
-                if (Arrays.equals(Runner.getSpawn(), monsters.get(j).getSpawn())) {
-                    casino = false;
-                }
-            }
-            if (casino) {
-                Runner.setTreasure(move.getTresure(Runner.getID()));
-                Runner.setTreasure(move.getTresure(Runner.getID()));
-            }
-            casino = true;
-            for (int j = 0; j < 12; j++) {
-                if (Arrays.equals(Thief.getSpawn(), monsters.get(j).getSpawn())) {
-                    casino = false;
-                }
-            }
-            if (casino) {
-                Thief.setTreasure(move.getTresure(Thief.getID()));
-            }
+
 
             //Print out the number of turns
             System.out.println("Turn: " + round);
             //Prints out the entrance floor layout and checks if anyone is in there
-            for (int i = 0; i < floor0.length; i++) {
-                System.out.print(floor0[i][0] + "-" + floor0[i][1] + "-" + floor0[i][2] + ": ");
-                if (Arrays.equals(Brawler.getSpawn(), floor0[i])) {
+            for (int i = 0; i < 1; i++) {
+                System.out.print(test[i][0][0] + "-" + test[i][0][1] + "-" + test[i][0][2] + ": ");
+                if (Arrays.equals(Brawler.getSpawn(), test[i][0])) {
                     System.out.print("B, ");
                 }
-                if (Arrays.equals(Sneaker.getSpawn(), floor0[i])) {
+                if (Arrays.equals(Sneaker.getSpawn(), test[i][0])) {
                     System.out.print("S, ");
                 }
-                if (Arrays.equals(Runner.getSpawn(), floor0[i])) {
+                if (Arrays.equals(Runner.getSpawn(), test[i][0])) {
                     System.out.print("R, ");
                 }
-                if (Arrays.equals(Thief.getSpawn(), floor0[i])) {
+                if (Arrays.equals(Thief.getSpawn(), test[i][0])) {
                     System.out.print("T, ");
                 } else {
                     System.out.print("");
@@ -169,7 +128,7 @@ public class GameEngine3 {
             System.out.println("");
 
             //Print out floors 1-4
-            for (int j = 0; j < 4; j++) {
+            for (int j = 1; j < 5; j++) {
                 for (int k = 0; k < 9; k++) {
                     if (k % 3 == 0) {
                         System.out.println("");
