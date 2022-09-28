@@ -312,4 +312,11 @@ public class Facility3 {
         //return 2 means Sneaker doesn't fight
         return chance;
     }
+    public int[] teleport(){
+        int X = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+        int Y = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
+        int Z = (int) Math.floor(Math.random() * (4 - 1 + 1) + 1);
+
+        return new int[]{Z,Y,X};
+    }
 }
