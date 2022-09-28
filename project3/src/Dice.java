@@ -1,3 +1,4 @@
+import java.util.List;
 public class Dice {
     //Output the results a fight and take in an id to determine the Adventure fighting
     public Integer fight(int id){

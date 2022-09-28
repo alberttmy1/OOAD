@@ -38,6 +38,10 @@ public class Treasure_stats {
         return id;
     }
 
+    public String getName(){
+        return name;
+    }
+
     //return the spawn coordinates
     public int[] getSpawn(){
         return loc;

@@ -86,6 +86,27 @@ public class GameEngine3 {
             boolean RMove = true;
             boolean TMove = true;
 
+
+            //For loop to check if a Hero is in combat
+            for (int y = 0; y < 12; y++) {
+                if (Arrays.equals(Brawler.getSpawn(), monsters.get(y).getSpawn())) {
+                    //brawler is in combat can't move
+                    BMove = false;
+                }
+                if (Arrays.equals(Sneaker.getSpawn(), monsters.get(y).getSpawn())) {
+                    //Sneaker is in combat can't move
+                    SMove = false;
+                }
+                if (Arrays.equals(Runner.getSpawn(), monsters.get(y).getSpawn())) {
+                    //Runner is in combat can't move
+                    RMove = false;
+                }
+                if (Arrays.equals(Thief.getSpawn(), monsters.get(y).getSpawn())) {
+                    //Thief is in combat can't move
+                    TMove = false;
+                }
+            }
+
             //Roll for treasure
             casino = true;
             for (int j = 0; j < 12; j++) {
@@ -204,306 +225,7 @@ public class GameEngine3 {
                 System.out.println("");
             }
 
-            //Battle System that check if any of the 12 creatures can engage in a battle with a adventure
-            for (int i = 0; i < 12; i++) {
-                //checks if an Orbitor is in battle with any of the Adventures
-                if (monsters.get(i).getID() == 1) {
-                    //Checks to see if they are in the same room and if they are they can fight
-                    if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        //Rolls dice and inputs Brawler buffs
-                        int res = battle3.fight(Brawler.getID());
-                        //if the creature dies then set its hp to zero and reduce the count of creatures
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                        }
-                        //Reduce the adventures health and if they die set their spawn point to all zeroes(graveyard)
-                        if (res == 2) {
-                            Brawler.setHP(Brawler.getHP() - 1);
-                            if (Brawler.getHP() == 0) {
-                                Brawler.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                        }
-                    }
-                    // if the monster and sneaker are in the same location and they are not in the graveyard then fight
-                    else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Sneaker.getID());
-                        // checks for 50% to leave or fight
-                        int choice = move.chance();
-                        if(choice == 1){
-                            if (res == 1) {
-                                //creature is defeated and its health is set to 0 and sent to the grave yard
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-                            }
-                            // adventerur takes damage and if it hits 0 then  it dies and sent to the grave yard
-                            if (res == 2) {
-                                Sneaker.setHP(Sneaker.getHP() - 1);
-                                if (Sneaker.getHP() == 0) {
-                                    Sneaker.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                    }
-                    // The rest follow the same logic as above
-                    else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Runner.getID());
-                        //If the Runner kills the monster he can move
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                            Runner.setSpawn(move.heroMove(Runner.getSpawn()));
-                        }
-                        //if he takes damage he can try to attack again
-                        if (res == 2) {
-                            Runner.setHP(Runner.getHP() - 1);
-                            if (Runner.getHP() == 0) {
-                                Runner.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                            res = battle3.fight(Runner.getID());
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
 
-                            }
-                            if (res == 2) {
-                                Runner.setHP(Runner.getHP() - 1);
-                                if (Runner.getHP() == 0) {
-                                    Runner.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                        //If the creature and runner tie he can try to fight him again
-                        if (res == 0) {
-                            res = battle3.fight(Runner.getID());
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-
-                            }
-                            if (res == 2) {
-                                Runner.setHP(Runner.getHP() - 1);
-                                if (Runner.getHP() == 0) {
-                                    Runner.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                    }//Same as logic as above for Orbitor
-                    else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Thief.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                        }
-                        if (res == 2) {
-                            Thief.setHP(Thief.getHP() - 1);
-                            if (Thief.getHP() == 0) {
-                                Thief.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                        }
-                    }
-                }
-                //The actions are the same as when a Adventure comes in contact with a Orbitor
-                if (monsters.get(i).getID() == 2) {
-                    if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Brawler.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                        }
-                        if (res == 2) {
-                            Brawler.setHP(Brawler.getHP() - 1);
-                            if (Brawler.getHP() == 0) {
-                                Brawler.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                        }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Sneaker.getID());
-                        int choice = move.chance();
-                        if(choice == 1){
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-                            }
-                            if (res == 2) {
-                                Sneaker.setHP(Sneaker.getHP() - 1);
-                                if (Sneaker.getHP() == 0) {
-                                    Sneaker.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Runner.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                            Runner.setSpawn(move.heroMove(Runner.getSpawn()));
-                        }
-                        if (res == 2) {
-                            Runner.setHP(Runner.getHP() - 1);
-                            if (Runner.getHP() == 0) {
-                                Runner.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                            res = battle3.fight(Runner.getID());
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-
-                            }
-                            if (res == 2) {
-                                Runner.setHP(Runner.getHP() - 1);
-                                if (Runner.getHP() == 0) {
-                                    Runner.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                        if (res == 0) {
-                            res = battle3.fight(Runner.getID());
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-
-                            }
-                            if (res == 2) {
-                                Runner.setHP(Runner.getHP() - 1);
-                                if (Runner.getHP() == 0) {
-                                    Runner.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Thief.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                        }
-                        if (res == 2) {
-                            Thief.setHP(Thief.getHP() - 1);
-                            if (Thief.getHP() == 0) {
-                                Thief.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                        }
-                    }
-                }
-                //The actions are the same as when a adventure comes in contact with Orbitor
-                if (monsters.get(i).getID() == 3) {
-                    if (Arrays.equals(monsters.get(i).getSpawn(), Brawler.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Brawler.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                        }
-                        if (res == 2) {
-                            Brawler.setHP(Brawler.getHP() - 1);
-                            if (Brawler.getHP() == 0) {
-                                Brawler.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                        }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Sneaker.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Sneaker.getID());
-                        int choice = move.chance();
-                        if(choice == 1){
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-                            }
-                            if (res == 2) {
-                                Sneaker.setHP(Sneaker.getHP() - 1);
-                                if (Sneaker.getHP() == 0) {
-                                    Sneaker.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Runner.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Runner.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                            Runner.setSpawn(move.heroMove(Runner.getSpawn()));
-                        }
-                        if (res == 2) {
-                            Runner.setHP(Runner.getHP() - 1);
-                            if (Runner.getHP() == 0) {
-                                Runner.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                            res = battle3.fight(Runner.getID());
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-
-                            }
-                            if (res == 2) {
-                                Runner.setHP(Runner.getHP() - 1);
-                                if (Runner.getHP() == 0) {
-                                    Runner.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                        if (res == 0) {
-                            res = battle3.fight(Runner.getID());
-                            if (res == 1) {
-                                monsters.get(i).setHP(0);
-                                monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                                enemies--;
-
-                            }
-                            if (res == 2) {
-                                Runner.setHP(Runner.getHP() - 1);
-                                if (Runner.getHP() == 0) {
-                                    Runner.setSpawn(new int[]{0, 0, 0});
-                                    hero--;
-                                }
-                            }
-                        }
-                    } else if (Arrays.equals(monsters.get(i).getSpawn(), Thief.getSpawn()) && !(Arrays.equals(monsters.get(i).getSpawn(), new int[]{0,0,0}))) {
-                        int res = battle3.fight(Thief.getID());
-                        if (res == 1) {
-                            monsters.get(i).setHP(0);
-                            monsters.get(i).setSpawn(new int[]{0, 0, 0});
-                            enemies--;
-                        }
-                        if (res == 2) {
-                            Thief.setHP(Thief.getHP() - 1);
-                            if (Thief.getHP() == 0) {
-                                Thief.setSpawn(new int[]{0, 0, 0});
-                                hero--;
-                            }
-                        }
-                    }
-                }
-            }
 
             //check monster location
 
@@ -535,25 +257,7 @@ public class GameEngine3 {
                     }
                 }
             }
-            //For loop to check if a Hero is in combat
-            for (int y = 0; y < 12; y++) {
-                if (Arrays.equals(Brawler.getSpawn(), monsters.get(y).getSpawn())) {
-                    //brawler is in combat can't move
-                    BMove = false;
-                }
-                if (Arrays.equals(Sneaker.getSpawn(), monsters.get(y).getSpawn())) {
-                    //Sneaker is in combat can't move
-                    SMove = false;
-                }
-                if (Arrays.equals(Runner.getSpawn(), monsters.get(y).getSpawn())) {
-                    //Runner is in combat can't move
-                    RMove = false;
-                }
-                if (Arrays.equals(Thief.getSpawn(), monsters.get(y).getSpawn())) {
-                    //Thief is in combat can't move
-                    TMove = false;
-                }
-            }
+
 
             //list that determines if an adventure is alive and not in combat then it can move
             if (BMove && Brawler.getHP() != 0) {

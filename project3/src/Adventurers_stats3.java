@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Adventurers_stats3 {
 
     //Private Variables
@@ -6,7 +10,7 @@ public class Adventurers_stats3 {
     private int id;
     private int atk;
     private int[] loc;
-    private int treasure;
+    private List<String> treasure = new ArrayList<String>();
 
     /*
     *Upon Initiating the class it takes in a number in order to determine the Adventurer
@@ -15,7 +19,6 @@ public class Adventurers_stats3 {
     public Adventurers_stats3(int num){
         hp  = 3;        //sets the health to 3
         atk = 1;        //sets the atk to 1
-        treasure = 0;   //sets all their treasures to 0
         //Sets a object up with a id and name
         if(num == 1){
             name = "Brawlers";
@@ -57,9 +60,10 @@ public class Adventurers_stats3 {
     }
 
     //return the amount of treasure they have
-    public Integer getTreasure(){return treasure;}
+    public List<String> getTreasure(){return treasure;}
 
     //increment treasure count
-    public void setTreasure(int money){ treasure += money;}
-
+    public void setTreasure(String item){
+        treasure.add(item);
+    }
 }
