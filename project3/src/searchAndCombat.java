@@ -46,10 +46,12 @@ public class searchAndCombat extends Dice {
         } else if (id == 4 && treasureId == 5) {
             //If they found a treasure, and it's a trap then roll for 50% chance of effect
             if(out >= 7) {
+                //got hit by the trap
                 if (temp.nextInt(2) == 0) {
-                    return 1;
+                    return 2;
                 }
-                return 0;
+                //found no effect
+                return 1;
             }
             return 0;
         }else{

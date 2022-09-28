@@ -9,15 +9,9 @@ public class GameEngine3{
         Facility3 move = new Facility3();
 
         //initializing the game and game ending variables
-        int money = 0;
+        int money = 24;
         int enemies = 12;
         int hero = 4;
-
-        //Default spawn locations
-        int[] start = {0,1,1};
-        int[] start1 = {0,1,1};
-        int[] start2 = {0,1,1};
-        int[] start3 = {0,1,1};
 
         //Variables to keep track of turns
         int round = 0;
@@ -28,17 +22,12 @@ public class GameEngine3{
         int[][][] test = tower.allfloors(); //floor, room coordinates, coordinates index
 
         //initialization of the characters
-        // This is an example of inheritance as each character is a category of adventurers
-        Adventurers_stats3 Brawler = new Adventurers_stats3(1);
-        //This is and example of identity as it distinguishes each adventurer's object by naming each adventurer
-        Adventurers_stats3 Sneaker = new Adventurers_stats3(2);
-        Adventurers_stats3 Runner = new Adventurers_stats3(3);
-        Adventurers_stats3 Thief = new Adventurers_stats3(4);
+        ArrayList<Adventurers_stats3> adventures = new ArrayList<Adventurers_stats3>();
 
-        Brawler.setSpawn(start);
-        Sneaker.setSpawn(start1);
-        Runner.setSpawn(start2);
-        Thief.setSpawn(start3);
+        //pass all 4 adventures with their id's
+        for(int i = 1; i < 5; i++){
+            adventures.add(new Adventurers_stats3(i));
+        }
 
         //array to hold all creatures
         ArrayList<Creatures_stats3> monsters = new ArrayList<Creatures_stats3>();
@@ -103,6 +92,9 @@ public class GameEngine3{
             }
 
             //Roll for treasure
+            for(int i = 0; i < 24; i++){
+
+            }
 
 
             //Print out the number of turns
@@ -238,7 +230,7 @@ public class GameEngine3{
             System.out.println("Runner - " +Runner.getTreasure()+ " Treasures(s) - " +Runner.getHP()+" Damage");
             System.out.println("Thief - " +Thief.getTreasure()+ " Treasures(s) - "+Thief.getHP()+" Damage");
             System.out.println("");
-            money = Brawler.getTreasure() + Sneaker.getTreasure() + Runner.getTreasure() + Thief.getTreasure();
+            //money = Brawler.getTreasure() + Sneaker.getTreasure() + Runner.getTreasure() + Thief.getTreasure();
 
 
         }//end of while loop

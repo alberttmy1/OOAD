@@ -8,7 +8,6 @@ public class Adventurers_stats3 {
     private int hp;
     private String name;
     private int id;
-    private int atk;
     private int[] loc;
     private List<String> treasure = new ArrayList<String>();
 
@@ -18,7 +17,7 @@ public class Adventurers_stats3 {
      */
     public Adventurers_stats3(int num){
         hp  = 3;        //sets the health to 3
-        atk = 1;        //sets the atk to 1
+        loc = new int[] {0,1,1};
         //Sets a object up with a id and name
         if(num == 1){
             name = "Brawlers";
