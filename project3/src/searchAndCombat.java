@@ -25,8 +25,16 @@ public class searchAndCombat extends Dice {
         return out;
     }
 
-    public int search(int id, int treasureId){
+    public int search(int id, List<String> inventory, int treasureId, String treasureName){
         Random temp = new Random();
+
+        //check for duplicates
+        for(int i = 0; i < inventory.size(); i++){
+            if(inventory.get(i) == treasureName){
+                return 0;
+            }
+        }
+
 
         //returns the dice rolls
         int out = rollForTreasure();
@@ -43,15 +51,15 @@ public class searchAndCombat extends Dice {
             if (out >= 9) {
                 return  1;
             }
-        } else if (id == 4 && treasureId == 5) {
+        }else if (id == 4 && treasureId == 5) {
             //If they found a treasure, and it's a trap then roll for 50% chance of effect
             if(out >= 7) {
                 //got hit by the trap
                 if (temp.nextInt(2) == 0) {
-                    return 2;
+                    return 3;
                 }
                 //found no effect
-                return 1;
+                return 2;
             }
             return 0;
         }else{

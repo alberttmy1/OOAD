@@ -38,6 +38,8 @@ public class Adventurers_stats3 {
         return id;
     }
 
+    public String getName() {return name;}
+
     //return the spawn coordinates
     public int[] getSpawn(){
         return loc;
