@@ -9,10 +9,11 @@ public class Celebrate {
         int rep = 0;
         for(int i = 0; i < 4; i++){
             rep = rand.nextInt(3);
-            for(int j = 0; j < rep; rep++){
+            for(int j = 0; j < rep; j++){
                 output += words[i];
             }
         }
+        System.out.println(output);
         return output;
     }
 }

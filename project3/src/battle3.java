@@ -11,21 +11,25 @@ public class battle3 extends Celebrate{
 
     static int [] fight(int[] Hlocation, int Hid, int Hhp, String name, int Chp, int[] Clocation, List<String> Hinv){
         searchAndCombat fight = new searchAndCombat();
+        System.out.print("in fight" + name);
         Celebrate celeb = new Celebrate();
         int battle_res;
         if(Hid == 1 || Hid == 2 || Hid == 4){
             battle_res = fight.combat(Hid, Hinv);
             if(Arrays.equals(Hlocation, Clocation) && !(Arrays.equals(Clocation, new int[]{0, 0, 0}))) {
                 if (battle_res == 0) {
+                    System.out.print("tied");
                     return new int[]{Hhp, Chp};
                 }
                 if (battle_res == 1) {
                     Chp--;
+                    System.out.print("creature lost");
                     System.out.print(name+ " celebrates: " + celeb.Cheers());
                     return new int[]{Hhp, Chp};
                 }
                 if (battle_res == 2) {
                     Hhp--;
+                    System.out.print("hero lost");
                     return new int[]{Hhp, Chp};
                 }
             }
@@ -48,6 +52,7 @@ public class battle3 extends Celebrate{
                         health = new int[]{Hhp, Chp};
                     }
                 }
+                System.out.print("health");
                 return health;
             }
         }
