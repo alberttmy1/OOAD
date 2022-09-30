@@ -1,7 +1,12 @@
 import java.util.Random;
 import java.util.List;
-public class searchAndCombat extends Dice {
 
+/*
+* Strategy Pattern
+* Created, assigned, and implemented search and combat algorithms for our adventures
+* Each hava unique id that is assigned to an algorithm output
+ */
+public class searchAndCombat extends Dice {
     /*
     ** out = 0 -> then no one took dmg
     ** out = 1 -> then creature took dmg
@@ -35,15 +40,15 @@ public class searchAndCombat extends Dice {
             }
         }
 
-
         //returns the dice rolls
         int out = rollForTreasure();
-
+        //Brawlers algorithm
         if(id == 1) {
             if (out >= 10) {
                 return 1;
             }
             return 0;
+            //Runner and Sneaker algorithm for treasure
         }else if (id == 2 || id == 3) {
             if(temp.nextInt(3) == 0){
                 return 0;
@@ -63,6 +68,7 @@ public class searchAndCombat extends Dice {
             }
             return 0;
         }else{
+            //check to see if the thief gets a treasure
             if(out >= 7){
                 return 1;
             }
@@ -71,6 +77,7 @@ public class searchAndCombat extends Dice {
         return 0;
     }
 
+    //Determine their default rolls without advantages by rolling 2 dice and adding their outputs
     private int rollForTreasure(){
         Random rand = new Random();
         int num1 = rand.nextInt(6) + 1;

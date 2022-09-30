@@ -3,22 +3,33 @@ import java.io.File;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileWriter;   // Import the FileWriter class
 
+/*
+* Implement an Observer through java's library
+* We pull data in a String called inputs and push the data to a text file
+* Our tracker pulls data and prints it out to the terminal
+ */
+@Deprecated
 public class Logger extends Observable {
+    //Stores the data for Logger
     private String inputs;
+    //Store the file name
     private String filename;
 
+    //Initiate Logger
     public Logger(String inputs){
         this.inputs = inputs;
     }
-
+    //return the data stored
     public String getInputs(){
         return inputs;
     }
+    //pass data to inputs and notify the observer about these new changes
     public void setInputs(String Input){
         this.inputs += Input;
         setChanged();
         notifyObservers();
     }
+    //Create a txt.file
     public void createFile(int count){
         try {
             File myObj = new File("Logger-"+count+".txt");
@@ -33,6 +44,7 @@ public class Logger extends Observable {
             e.printStackTrace();
         }
     }
+    //Write to the txt file
     public void writeFile(String input){
         try {
             FileWriter myWriter = new FileWriter(filename);
@@ -45,7 +57,7 @@ public class Logger extends Observable {
         }
     }
     public void Tracker(String days){
-        //We returned back info to logger
+        //Take data and print it to the terminal
         System.out.println(days);
     }
 }

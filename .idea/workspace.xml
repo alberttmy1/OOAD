@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="Fixed the classes algorithmns">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_21_22,_9_38_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_9_21_22__9_38_PM__Changes_.xml" beforeDir="false" />
+    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="Fixed a few bugs and Finished Logger and Tracker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project3/src/Celebrate.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Celebrate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project3/src/GameEngine3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/GameEngine3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project3/src/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/battle3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/battle3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Map3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/main3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/main3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/searchAndCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/searchAndCombat.java" afterDir="false" />
     </list>
-    <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="Prints to check output">
-      <change beforePath="$PROJECT_DIR$/project3/src/Celebrate.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Celebrate.java" afterDir="false" />
-    </list>
+    <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="Finished Logger" />
     <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
-    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Alber Desktop">
-      <change beforePath="$PROJECT_DIR$/project3/src/GameEngine3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/GameEngine3.java" afterDir="false" />
+    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Finished Decorator">
+      <change beforePath="$PROJECT_DIR$/project3/src/Creatures_stats3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Creatures_stats3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Dice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Facility3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Facility3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/Treasure_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Treasure_stats.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project3/src/battle3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/battle3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project3/src/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,40 +34,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/project3/src/Celebrate.java">
-      <ranges>
-        <range start1="0" end1="3" start2="0" end2="0" changelist="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" />
-        <range start1="4" end1="17" start2="1" end2="38" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="18" end1="18" start2="39" end2="55" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/project3/src/battle3.java">
-      <ranges>
-        <range start1="8" end1="12" start2="8" end2="11" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="13" end1="15" start2="12" end2="13" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="20" end1="21" start2="18" end2="19" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="25" end1="27" start2="23" end2="25" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="31" end1="32" start2="29" end2="30" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="46" end1="47" start2="44" end2="45" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="54" end1="55" start2="52" end2="53" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="60" end1="60" start2="58" end2="82" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/project3/src/GameEngine3.java">
-      <ranges>
-        <range start1="1" end1="1" start2="1" end2="4" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="3" end1="3" start2="6" end2="8" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="4" end1="6" start2="9" end2="19" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="7" end1="8" start2="20" end2="27" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="61" end1="61" start2="80" end2="85" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="66" end1="68" start2="90" end2="93" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="259" end1="260" start2="284" end2="285" changelist="c5c9fd01-59c5-44b8-af77-1948b8dd7056" />
-        <range start1="323" end1="323" start2="348" end2="355" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="325" end1="325" start2="357" end2="361" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -259,7 +227,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664415732709</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Finished Decorator">
+      <created>1664511168877</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664511168877</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Finished Logger">
+      <created>1664511187623</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664511187623</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed a few bugs and Finished Logger and Tracker">
+      <created>1664511210889</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664511210889</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,7 +280,10 @@
     <MESSAGE value="Updated GameEngine and battle algorithmn" />
     <MESSAGE value="Prints to check output" />
     <MESSAGE value="Fixed the classes algorithmns" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the classes algorithmns" />
+    <MESSAGE value="Finished Decorator" />
+    <MESSAGE value="Finished Logger" />
+    <MESSAGE value="Fixed a few bugs and Finished Logger and Tracker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a few bugs and Finished Logger and Tracker" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OOAD$main.ic" NAME="main Coverage Results" MODIFIED="1663802061238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -1,8 +1,14 @@
+/*
+* Decorator Pattern:
+* We have subclasses for every type of celebration and our default initiates shout
+ */
 
+//initiate the interface and create a public function that returns back a string called celeb()
 public interface Celebrate{
     public String celeb();
 
 }
+//Default case that implements shout to celeb()
 class standardCeleb implements Celebrate{
     @Override
     public String celeb(){
@@ -10,6 +16,7 @@ class standardCeleb implements Celebrate{
         return "Shout,";
     }
 }
+//The decorator that will update celeb()
 class celebrateDecorator implements Celebrate{
     protected Celebrate fire;
     public celebrateDecorator(Celebrate f){
@@ -20,6 +27,8 @@ class celebrateDecorator implements Celebrate{
         return this.fire.celeb();
     }
 }
+
+//add jump to the celeb() function
 class jump extends celebrateDecorator{
 
     public jump(Celebrate fire){
@@ -31,6 +40,7 @@ class jump extends celebrateDecorator{
     }
 }
 
+//add spin to the celeb() function
 class spin extends celebrateDecorator{
 
 
@@ -43,6 +53,7 @@ class spin extends celebrateDecorator{
     }
 }
 
+//add dance to the celeb() function
 class dance extends celebrateDecorator{
 
 

@@ -41,6 +41,7 @@ public class Map3 {
     return room4;
     }
 
+    //all floors combined
     public int[][][] allfloors(){
         return new int[][][] {lv0(), lv1(), lv2(), lv3(), lv4()};
     }

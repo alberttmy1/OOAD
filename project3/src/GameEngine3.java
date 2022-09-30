@@ -9,10 +9,11 @@ import java.util.Observer;
 
 public class GameEngine3 extends battle3 implements Observer {
     battle3 attack = new battle3();
-
+    @Deprecated
     private Logger gameUpdate;
 
     @Override
+    @Deprecated
     public void update(Observable observable, Object arg){
         gameUpdate = (Logger) observable;
     }
@@ -98,7 +99,8 @@ public class GameEngine3 extends battle3 implements Observer {
             boolean TMove = true;
 
             //Print out the number of turns
-            System.out.println("Turn: " + round);
+            System.out.println("Tracker Turn: " + round);
+            System.out.println("");
             //Prints out the entrance floor layout and checks if anyone is in there
 //            for (int i = 0; i < 1; i++) {
 //                System.out.print(test[i][0][0] + "-" + test[i][0][1] + "-" + test[i][0][2] + ": ");
@@ -337,15 +339,34 @@ public class GameEngine3 extends battle3 implements Observer {
             }
 
             round++;
-            System.out.println("Brawler - " +adventures.get(0).getTreasure()+ " Treasures(s) - "+adventures.get(0).getHP()+" Damage");
-            System.out.println("Sneaker - " +adventures.get(1).getTreasure()+ " Treasures(s) - " +adventures.get(1).getHP()+" Damage");
-            System.out.println("Runner - " +adventures.get(2).getTreasure()+ " Treasures(s) - " +adventures.get(2).getHP()+" Damage");
-            System.out.println("Thief - " +adventures.get(3).getTreasure()+ " Treasures(s) - "+adventures.get(3).getHP()+" Damage");
+            //The printout everything properly in here
+            System.out.println("Total Active Adventures: " + hero);
+            System.out.printf("%-10s %-10s %-10s %s", "Adventures", "Room", "Damage", "Treasure");
+            System.out.println("");
+            for(int i = 0; i < 4; i++){
+                System.out.printf("%-10s %-10s %-10s %s",adventures.get(i).getName(), Arrays.toString(adventures.get(i).getSpawn()), adventures.get(i).getHP(),adventures.get(i).getTreasure().toString());
+                System.out.println("");
+            }
             System.out.println("");
 
-            System.out.println("Hero: "+ hero);
-            System.out.println("Treasure: " + money);
-            System.out.println("Creatures: "+ enemies);
+//            System.out.println("Brawler - " +adventures.get(0).getTreasure()+ " Treasures(s) - "+adventures.get(0).getHP()+" Damage");
+//            System.out.println("Sneaker - " +adventures.get(1).getTreasure()+ " Treasures(s) - " +adventures.get(1).getHP()+" Damage");
+//            System.out.println("Runner - " +adventures.get(2).getTreasure()+ " Treasures(s) - " +adventures.get(2).getHP()+" Damage");
+//            System.out.println("Thief - " +adventures.get(3).getTreasure()+ " Treasures(s) - "+adventures.get(3).getHP()+" Damage");
+//            System.out.println("");
+//
+//            System.out.println("Hero: "+ hero);
+//            System.out.println("Treasure: " + money);
+//            System.out.println("Creatures: "+ enemies);
+
+            System.out.println("Total Active Creatures: " + enemies);
+            System.out.printf("%-10s %s", "Creatures", "Room");
+            System.out.println("");
+            for(int i = 0; i < 12; i++){
+                System.out.printf("%-10s %s",monsters.get(i).getName(), Arrays.toString(monsters.get(i).getSpawn()));
+                System.out.println("");
+            }
+
             //tracker takes in bytearrayoutput and returns a normal System.out()
             System.out.flush();
             System.setOut(old);
@@ -358,6 +379,13 @@ public class GameEngine3 extends battle3 implements Observer {
         //logger write and create txt file
         observable.createFile(round);
         observable.writeFile(observable.getInputs());
+//        if(hero == 0){
+//            return 0;
+//        }else if(enemies == 0){
+//            return 1;
+//        }else{
+//            return 2;
+//        }
 
     }
 }

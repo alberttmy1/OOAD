@@ -1,0 +1,3 @@
+Hero ending: 4
+Creature ending: 26
+Treasure ending: 0
