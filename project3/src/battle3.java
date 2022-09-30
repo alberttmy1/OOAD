@@ -13,6 +13,8 @@ public class battle3{
 //        System.out.print("in fight" + name);
         int battle_res;
         if(Hid == 1 || Hid == 2 || Hid == 4){
+            // passes hero id and innventory to determine their combat experience and add-ons from treasures
+            // combat is strategy pattern
             battle_res = fight.combat(Hid, Hinv);
             if(Arrays.equals(Hlocation, Clocation) && !(Arrays.equals(Clocation, new int[]{0, 0, 0}))) {
                 if (battle_res == 0) {
@@ -20,8 +22,10 @@ public class battle3{
                     return new int[]{Hhp, Chp};
                 }
                 if (battle_res == 1) {
+                    //Decreases health
                     Chp--;
 //                    System.out.print("creature lost");
+                    //print celebitory actions
                     System.out.println(name+ " celebrates: " + party());
                     return new int[]{Hhp, Chp};
                 }
@@ -62,6 +66,7 @@ public class battle3{
         String temp = "";
 
         //Decorator
+        // wrapping
         Celebrate post = new jump(new standardCeleb());
         Celebrate post2 = new spin(post);
         Celebrate post3 = new dance(post2);
@@ -73,6 +78,7 @@ public class battle3{
         //System.out.println(Arrays.toString(words));
         //System.out.println(output);
 
+        // randomizes how many times to print action
         for(int i = 0; i < 4; i++){
             for(int j = 0; j < rand.nextInt(3); j++){
                 temp += words[i] + ", ";

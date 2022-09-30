@@ -46,5 +46,11 @@ public class Creatures_stats3 {
     public void setSpawn(int[] place){
         loc = place;
     }
+    public void setName(String Name){
+        name = Name;
+    }
+    public String getName(){
+        return name;
+    }
 
 }

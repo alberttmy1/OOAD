@@ -37,7 +37,7 @@ public class Treasure_stats {
     public Integer getID(){
         return id;
     }
-
+    // return name
     public String getName(){
         return name;
     }

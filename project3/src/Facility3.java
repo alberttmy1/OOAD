@@ -150,6 +150,7 @@ public class Facility3 {
         return heroLoc;
     }
 
+    // intailize treasure spawn
     public int [] treasureSpawn(int id){
         int x = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
         int y = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
@@ -294,24 +295,7 @@ public class Facility3 {
         }
     }
 
-    public int getTresure(int id){
-        // checks if its higher than a 10 to get treasure
-        int dice_1 = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        int dice_2 = (int) Math.floor(Math.random() * (6 - 1 + 1) + 1);
-        int sum = dice_1 + dice_2;
-        return sum;
-    }
-
-    public int chance(){
-        int chance = (int) Math.floor(Math.random() * (2- 1 + 1) + 1);
-        
-        //Sneaker fights
-        if(chance == 1){
-            return chance;
-        }
-        //return 2 means Sneaker doesn't fight
-        return chance;
-    }
+    // if they use the treasure portal this will spawn them in a random location
     public int[] teleport(){
         int X = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
         int Y = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
