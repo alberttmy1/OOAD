@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="Fixed a few bugs and Finished Logger and Tracker">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/Celebrate.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Celebrate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/GameEngine3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/GameEngine3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/Map3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Map3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/main3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/main3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/searchAndCombat.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/searchAndCombat.java" afterDir="false" />
-    </list>
+    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="Comments and txt files" />
     <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="Finished Logger" />
     <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
-    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Finished Decorator">
-      <change beforePath="$PROJECT_DIR$/project3/src/Creatures_stats3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Creatures_stats3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/Dice.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Dice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/Facility3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Facility3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/Treasure_stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/Treasure_stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/battle3.java" beforeDir="false" afterPath="$PROJECT_DIR$/project3/src/battle3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project3/src/test.java" beforeDir="false" />
-    </list>
+    <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Comments from Albert" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +45,10 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\Desktop\4229 Object Orientated\project3" />
+      <recent name="C:\Users\Owner\Desktop\4229 Object Orientated\project3\src" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
@@ -248,7 +237,28 @@
       <option name="project" value="LOCAL" />
       <updated>1664511210889</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Finished Decorator">
+      <created>1664566250062</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664566250062</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Comments from Albert">
+      <created>1664566266933</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1664566266933</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Comments and txt files">
+      <created>1664566284083</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664566284083</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +293,10 @@
     <MESSAGE value="Finished Decorator" />
     <MESSAGE value="Finished Logger" />
     <MESSAGE value="Fixed a few bugs and Finished Logger and Tracker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a few bugs and Finished Logger and Tracker" />
+    <MESSAGE value="txt files" />
+    <MESSAGE value="Comments from Albert" />
+    <MESSAGE value="Comments and txt files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments and txt files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OOAD$main.ic" NAME="main Coverage Results" MODIFIED="1663802061238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
