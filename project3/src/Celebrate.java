@@ -1,6 +1,3 @@
-import java.util.Random;
-
-public class Celebrate {
 
     public String Cheers(){
         Random rand = new Random();
