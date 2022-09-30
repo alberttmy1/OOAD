@@ -75,83 +75,83 @@ battle3 attack = new battle3();
             //Print out the number of turns
             System.out.println("Turn: " + round);
             //Prints out the entrance floor layout and checks if anyone is in there
-            for (int i = 0; i < 1; i++) {
-                System.out.print(test[i][0][0] + "-" + test[i][0][1] + "-" + test[i][0][2] + ": ");
-                if (Arrays.equals(adventures.get(0).getSpawn(), test[i][0])) {
-                    System.out.print("B, ");
-                }
-                if (Arrays.equals(adventures.get(1).getSpawn(), test[i][0])) {
-                    System.out.print("S, ");
-                }
-                if (Arrays.equals(adventures.get(2).getSpawn(), test[i][0])) {
-                    System.out.print("R, ");
-                }
-                if (Arrays.equals(adventures.get(3).getSpawn(), test[i][0])) {
-                    System.out.print("T, ");
-                } else {
-                    System.out.print("");
-                }
-            }
-            System.out.println("");
-
-            //Print out floors 1-4
-            for (int j = 1; j < 5; j++) {
-                for (int k = 0; k < 9; k++) {
-                    if (k % 3 == 0) {
-                        System.out.println("");
-                    }
-                    String coor = test[j][k][0] + "-" + test[j][k][1] + "-" + test[j][k][2] + ": ";
-                    if (Arrays.equals(adventures.get(0).getSpawn(), test[j][k])) {
-                        temp += "B, ";
-                    }
-                    if (Arrays.equals(adventures.get(1).getSpawn(), test[j][k])) {
-                        temp += "S, ";
-                    }
-                    if (Arrays.equals(adventures.get(2).getSpawn(), test[j][k])) {
-                        temp += "R, ";
-                    }
-                    if (Arrays.equals(adventures.get(3).getSpawn(), test[j][k])) {
-                        temp += "T, ";
-                    }
-                    for (int m = 0; m < 12; m++) {
-                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 1) {
-                            temp += "OB, ";
-                        }
-                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 2) {
-                            temp += "SE, ";
-                        }
-                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 3) {
-                            temp += "BL, ";
-                        }
-                    }
-                    for (int i = 0; i < 24; i++) {
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 1) {
-                            temp += "SW, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 2) {
-                            temp += "GE, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 3) {
-                            temp += "AR, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 4) {
-                            temp += "PO, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 5) {
-                            temp += "TR, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 6) {
-                            temp += "POT, ";
-                        }
-                    }
-
-                    System.out.printf("%s %-15s", coor, temp);
-                    temp = "";
-                }
-                System.out.println("");
-            }
-
-            System.out.println("");
+//            for (int i = 0; i < 1; i++) {
+//                System.out.print(test[i][0][0] + "-" + test[i][0][1] + "-" + test[i][0][2] + ": ");
+//                if (Arrays.equals(adventures.get(0).getSpawn(), test[i][0])) {
+//                    System.out.print("B, ");
+//                }
+//                if (Arrays.equals(adventures.get(1).getSpawn(), test[i][0])) {
+//                    System.out.print("S, ");
+//                }
+//                if (Arrays.equals(adventures.get(2).getSpawn(), test[i][0])) {
+//                    System.out.print("R, ");
+//                }
+//                if (Arrays.equals(adventures.get(3).getSpawn(), test[i][0])) {
+//                    System.out.print("T, ");
+//                } else {
+//                    System.out.print("");
+//                }
+//            }
+//            System.out.println("");
+//
+//            //Print out floors 1-4
+//            for (int j = 1; j < 5; j++) {
+//                for (int k = 0; k < 9; k++) {
+//                    if (k % 3 == 0) {
+//                        System.out.println("");
+//                    }
+//                    String coor = test[j][k][0] + "-" + test[j][k][1] + "-" + test[j][k][2] + ": ";
+//                    if (Arrays.equals(adventures.get(0).getSpawn(), test[j][k])) {
+//                        temp += "B, ";
+//                    }
+//                    if (Arrays.equals(adventures.get(1).getSpawn(), test[j][k])) {
+//                        temp += "S, ";
+//                    }
+//                    if (Arrays.equals(adventures.get(2).getSpawn(), test[j][k])) {
+//                        temp += "R, ";
+//                    }
+//                    if (Arrays.equals(adventures.get(3).getSpawn(), test[j][k])) {
+//                        temp += "T, ";
+//                    }
+//                    for (int m = 0; m < 12; m++) {
+//                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 1) {
+//                            temp += "OB, ";
+//                        }
+//                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 2) {
+//                            temp += "SE, ";
+//                        }
+//                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 3) {
+//                            temp += "BL, ";
+//                        }
+//                    }
+//                    for (int i = 0; i < 24; i++) {
+//                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 1) {
+//                            temp += "SW, ";
+//                        }
+//                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 2) {
+//                            temp += "GE, ";
+//                        }
+//                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 3) {
+//                            temp += "AR, ";
+//                        }
+//                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 4) {
+//                            temp += "PO, ";
+//                        }
+//                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 5) {
+//                            temp += "TR, ";
+//                        }
+//                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 6) {
+//                            temp += "POT, ";
+//                        }
+//                    }
+//
+//                    System.out.printf("%s %-15s", coor, temp);
+//                    temp = "";
+//                }
+//                System.out.println("");
+//            }
+//
+//            System.out.println("");
 
 
 
@@ -257,7 +257,7 @@ battle3 attack = new battle3();
                 for(int k = 0; k < 12; k++){
                     if (Arrays.equals(adventures.get(i).getSpawn(), monsters.get(k).getSpawn()) && monsters.get(k).getHP() != 0 && adventures.get(i).getHP() != 0){
                         int[] attack_res = attack.fight(adventures.get(i).getSpawn(), adventures.get(i).getID(), adventures.get(i).getHP(), adventures.get(i).getName(), monsters.get(k).getHP(),monsters.get(k).getSpawn(), adventures.get(i).getTreasure());
-                        System.out.print(Arrays.toString(attack_res));
+//                        System.out.print(Arrays.toString(attack_res));
                         if(attack_res[0] == 0){
                             adventures.get(i).setSpawn(new int[] {0,0,0});
                             adventures.get(i).setHP(0);

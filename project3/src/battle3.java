@@ -18,7 +18,7 @@ public class battle3 extends Celebrate{
             battle_res = fight.combat(Hid, Hinv);
             if(Arrays.equals(Hlocation, Clocation) && !(Arrays.equals(Clocation, new int[]{0, 0, 0}))) {
                 if (battle_res == 0) {
-                    System.out.print("tied");
+//                    System.out.print("tied");
                     return new int[]{Hhp, Chp};
                 }
                 if (battle_res == 1) {
@@ -29,7 +29,7 @@ public class battle3 extends Celebrate{
                 }
                 if (battle_res == 2) {
                     Hhp--;
-                    System.out.print("hero lost");
+//                    System.out.print("hero lost");
                     return new int[]{Hhp, Chp};
                 }
             }
@@ -52,7 +52,7 @@ public class battle3 extends Celebrate{
                         health = new int[]{Hhp, Chp};
                     }
                 }
-                System.out.print("health");
+//                System.out.print("health");
                 return health;
             }
         }
