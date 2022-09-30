@@ -6,13 +6,11 @@ import java.util.List;
  ** out = 1 -> then creature took dmg
  ** out = 2 -> hero took dmg
  */
-
-public class battle3 extends Celebrate{
-
-    static int [] fight(int[] Hlocation, int Hid, int Hhp, String name, int Chp, int[] Clocation, List<String> Hinv){
+import java.util.Random;
+public class battle3{
+    public int [] fight(int[] Hlocation, int Hid, int Hhp, String name, int Chp, int[] Clocation, List<String> Hinv){
         searchAndCombat fight = new searchAndCombat();
-        System.out.print("in fight" + name);
-        Celebrate celeb = new Celebrate();
+//        System.out.print("in fight" + name);
         int battle_res;
         if(Hid == 1 || Hid == 2 || Hid == 4){
             battle_res = fight.combat(Hid, Hinv);
@@ -23,8 +21,8 @@ public class battle3 extends Celebrate{
                 }
                 if (battle_res == 1) {
                     Chp--;
-                    System.out.print("creature lost");
-                    System.out.print(name+ " celebrates: " + celeb.Cheers());
+//                    System.out.print("creature lost");
+                    System.out.println(name+ " celebrates: " + party());
                     return new int[]{Hhp, Chp};
                 }
                 if (battle_res == 2) {
@@ -44,7 +42,7 @@ public class battle3 extends Celebrate{
                     }
                     if (battle_res == 1 && Chp != 0) {
                         Chp--;
-                        System.out.print(name+ " celebrates: " + celeb.Cheers());
+                        System.out.println(name+ " celebrates: " + party());
                         health = new int[]{Hhp, Chp};
                     }
                     if (battle_res == 2) {
@@ -57,5 +55,29 @@ public class battle3 extends Celebrate{
             }
         }
         return new int[]{Hhp, Chp};
+    }
+
+    private String party(){
+        Random rand = new Random();
+        String temp = "";
+
+        //Decorator
+        Celebrate post = new jump(new standardCeleb());
+        Celebrate post2 = new spin(post);
+        Celebrate post3 = new dance(post2);
+        String output = post3.celeb();
+
+        //Store into array
+        String[] words = output.split(",");
+
+        //System.out.println(Arrays.toString(words));
+        //System.out.println(output);
+
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < rand.nextInt(3); j++){
+                temp += words[i] + ", ";
+            }
+        }
+        return temp;
     }
 }

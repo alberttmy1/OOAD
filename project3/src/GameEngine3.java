@@ -1,11 +1,30 @@
 import jdk.jshell.execution.LoaderDelegate;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Observable;
+import java.util.Observer;
 
-public class GameEngine3{
-battle3 attack = new battle3();
+public class GameEngine3 extends battle3 implements Observer {
+    battle3 attack = new battle3();
+
+    private Logger gameUpdate;
+
+    @Override
+    public void update(Observable observable, Object arg){
+        gameUpdate = (Logger) observable;
+    }
+
     void run(){
-        //Initiate Facility
+
+        //observer stuff
+        Logger observable = new Logger(null);
+        GameEngine3 observer = new GameEngine3();
+        observable.addObserver(observer);
+
+        //initiate stuff
         Facility3 move = new Facility3();
         searchAndCombat look = new searchAndCombat();
 
@@ -60,12 +79,18 @@ battle3 attack = new battle3();
             treasures.get(i).setSpawn(move.treasureSpawn(treasures.get(i).getID()));
         }
 
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream ps = new PrintStream(baos);
+        PrintStream old = System.out;
+
         /*
         *Continue to run until either they collect all the treasure(money), all the creatures(enemies),
         * or all the Adventures(hero) die
          */
-        Celebrate celeb = new Celebrate();
-        while(money > 0 && enemies > 0 && hero > 0){
+
+        while( money > 0 && enemies > 0 && hero > 0){
+            System.setOut(ps);
             //Boolean variables to track if an adventure can move or not
             boolean BMove = true;
             boolean SMove = true;
@@ -321,7 +346,18 @@ battle3 attack = new battle3();
             System.out.println("Hero: "+ hero);
             System.out.println("Treasure: " + money);
             System.out.println("Creatures: "+ enemies);
+            //tracker takes in bytearrayoutput and returns a normal System.out()
+            System.out.flush();
+            System.setOut(old);
+            observable.setInputs(baos.toString());
+            observable.Tracker(baos.toString());
+            baos.reset();
+
         }//end of while loop
         System.out.println("End");
+        //logger write and create txt file
+        observable.createFile(round);
+        observable.writeFile(observable.getInputs());
+
     }
 }
