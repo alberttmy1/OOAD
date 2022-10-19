@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="moved txt files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project4/src/GameEngine4.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/GameEngine4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project4/src/main4.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/main4.java" afterDir="false" />
-    </list>
-    <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="Finished Logger">
-      <change beforePath="$PROJECT_DIR$/project4/src/GameEngine4.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/GameEngine4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project4/src/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project4/src/searchAndCombat4.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/searchAndCombat4.java" afterDir="false" />
-    </list>
+    <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="main works need to test it" />
+    <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="Edited to get main to work" />
     <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
     <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Comments from Albert" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,20 +19,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/project4/src/GameEngine4.java">
-      <ranges>
-        <range start1="9" end1="10" start2="9" end2="10" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="220" end1="224" start2="220" end2="231" changelist="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" />
-        <range start1="225" end1="230" start2="232" end2="246" changelist="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" />
-        <range start1="231" end1="231" start2="247" end2="259" changelist="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" />
-        <range start1="232" end1="244" start2="260" end2="274" changelist="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" />
-        <range start1="492" end1="494" start2="522" end2="523" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="495" end1="499" start2="524" end2="529" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-        <range start1="512" end1="518" start2="542" end2="548" changelist="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -293,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664566379828</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Edited to get main to work">
+      <created>1666142744284</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1666142744284</updated>
+    </task>
+    <task id="LOCAL-00029" summary="main works need to test it">
+      <created>1666142867481</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1666142867481</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,7 +300,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sdd" />
     <MESSAGE value="123" />
     <MESSAGE value="test" />
     <MESSAGE value="test_3" />
@@ -332,7 +323,9 @@
     <MESSAGE value="Comments from Albert" />
     <MESSAGE value="Comments and txt files" />
     <MESSAGE value="moved txt files" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved txt files" />
+    <MESSAGE value="Edited to get main to work" />
+    <MESSAGE value="main works need to test it" />
+    <option name="LAST_COMMIT_MESSAGE" value="main works need to test it" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OOAD$main.ic" NAME="main Coverage Results" MODIFIED="1663802061238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
