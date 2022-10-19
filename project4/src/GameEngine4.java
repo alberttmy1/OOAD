@@ -218,30 +218,60 @@ public class GameEngine4 extends battle3 implements Observer {
 
             if(options == "1"){
                 int count = 0;
-                //list that determines if an adventure is alive and not in combat then it can move
-                for(int k = 0; k < 12; k++){
-                    if (Arrays.equals(adventures.get(0).getSpawn(), monsters.get(k).getSpawn()) && monsters.get(k).getHP() != 0 && adventures.get(0).getHP() != 0){
-                        adventures.get(0).setHP(adventures.get(0).getHP() - 1);
-                    }
-                }
-
-                if(adventures.get(0).getHP() <= 0){
-                    hero--;
-                    break;
-                }
-
-                if (AMove && adventures.get(0).getHP() != 0) {
-                    for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
-                        if (adventures.get(0).getTreasure().get(i) == "Teleport") {
-                            adventures.get(0).setSpawn(move.teleport());
-                            moved = false;
+                if(adventures.get(0).getID() == 3 ){
+                    if (AMove && adventures.get(0).getHP() != 0) {
+                        for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
+                            if (adventures.get(0).getTreasure().get(i) == "Teleport") {
+                                adventures.get(0).setSpawn(move.teleport());
+                                moved = false;
+                            }
+                        }
+                        if(moved){
+                            adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
                         }
                     }
-                    if(moved){
-                        adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
+                    options = choice.command();
+                    if(options == "1"){
+                        if (AMove && adventures.get(0).getHP() != 0) {
+                            for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
+                                if (adventures.get(0).getTreasure().get(i) == "Teleport") {
+                                    adventures.get(0).setSpawn(move.teleport());
+                                    moved = false;
+                                }
+                            }
+                            if(moved){
+                                adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
+                            }
+                        }
                     }
                 }
-            }else if(options == "2"){
+                else{
+                    //list that determines if an adventure is alive and not in combat then it can move
+                    for(int k = 0; k < 12; k++){
+                        if (Arrays.equals(adventures.get(0).getSpawn(), monsters.get(k).getSpawn()) && monsters.get(k).getHP() != 0 && adventures.get(0).getHP() != 0){
+                            adventures.get(0).setHP(adventures.get(0).getHP() - 1);
+                        }
+                    }
+
+                    if(adventures.get(0).getHP() <= 0){
+                        hero--;
+                        break;
+                    }
+
+                    if (AMove && adventures.get(0).getHP() != 0) {
+                        for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
+                            if (adventures.get(0).getTreasure().get(i) == "Teleport") {
+                                adventures.get(0).setSpawn(move.teleport());
+                                moved = false;
+                            }
+                        }
+                        if(moved){
+                            adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
+                        }
+                    }
+                }
+
+            }else if((options == "2")){
                 //Search
                 for(int i = 0; i < 24; i++){
                     if(Arrays.equals(adventures.get(0).getSpawn(), treasures.get(i).getSpawn())){

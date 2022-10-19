@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.Arrays;
 public class menu {
 public Integer start(){
         //initialization of the characters
@@ -8,10 +10,17 @@ public Integer start(){
         //pass all 4 adventures with their id's
         for(int i = 1; i < 5; i++){
             adventures.add(new Adventurers_stats4(i));
+
         }
+        List<Adventurers_stats4> nam =new ArrayList<Adventurers_stats4>();
+        List<String> nem = new List<String>;
+        for(int i = 0; i< 4; i++){
+            nem.add(adventures.get(i).getName());
+         }
+
         int id = 0;
         Scanner reader = new Scanner(System.in);
-        System.out.println("chose a adventurer: " + adventures.toString());
+        System.out.println("chose a adventurer: " + nem);
         String input = reader.nextLine();
         if(input == "Brawlers") {
             id = 1;

@@ -6,7 +6,7 @@ import java.util.List;
 * Created, assigned, and implemented search and combat algorithms for our adventures
 * Each hava unique id that is assigned to an algorithm output
  */
-public class searchAndCombat4 extends Dice {
+public class searchAndCombat4 extends Dice4 {
     /*
     ** out = 0 -> then no one took dmg
     ** out = 1 -> then creature took dmg
