@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72aa8fb0-3609-4b01-80f2-bc55074aa6e3" name="Changes" comment="main works need to test it">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project4/src/Decision.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/Decision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project4/src/GameEngine4.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/GameEngine4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project4/src/menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/project4/src/menu.java" afterDir="false" />
     </list>
-    <list id="d6f5ed4e-2987-40bb-8cfe-e52f3fbd4038" name="Changes by alberttamayo" comment="Edited to get main to work" />
     <list id="169bb204-e172-49c2-b01a-5f1f4e64cf6e" name="Changes by Owner" comment="" />
     <list id="c5c9fd01-59c5-44b8-af77-1948b8dd7056" name="Changes by Project Bert" comment="Comments from Albert" />
     <option name="SHOW_DIALOG" value="false" />
@@ -301,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666205114927</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="main works need to test it">
+      <created>1666205215426</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1666205215426</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,6 +351,17 @@
     <MESSAGE value="Edited to get main to work" />
     <MESSAGE value="main works need to test it" />
     <option name="LAST_COMMIT_MESSAGE" value="main works need to test it" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/project4/src/GameEngine4.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/OOAD$main.ic" NAME="main Coverage Results" MODIFIED="1663802061238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

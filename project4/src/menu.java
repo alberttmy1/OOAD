@@ -36,10 +36,15 @@ public Integer start(){
         return id;
     }
     public String name(){
-        Scanner reader = new Scanner(System.in);
+        Scanner sub = new Scanner(System.in);
         System.out.println("Choose a Name for your Adventure(ex: Bob, Ted): ");
-        String input = reader.nextLine();
-        reader.close();
-        return input;
+        // print the next line
+//        System.out.println("" + sub.nextLine());
+        String pub = "";
+        if(sub.hasNextLine()){
+            pub = sub.nextLine();
+        }
+        sub.close();
+        return pub;
     }
 }

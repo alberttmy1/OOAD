@@ -54,7 +54,8 @@ public class GameEngine4 extends battle4 implements Observer {
         adventures.add(new Adventurers_stats4(adventerur.start()));
 
         //Chooses A name for their hero
-        String name = adventerur.name();
+        String name = "";
+        name = adventerur.name();
 
         //pass all 4 adventures with their id's
 //        for(int i = 1; i < 5; i++){
