@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Observable;
 import java.util.Observer;
 
-public class GameEngine4 extends battle3 implements Observer {
+public class GameEngine4 extends battle4 implements Observer {
     battle4 attack = new battle4();
     @Deprecated
     private Logger4 gameUpdate;
@@ -520,13 +520,13 @@ public class GameEngine4 extends battle3 implements Observer {
             }
             round++;
             //The printout everything properly in here
-            System.out.println("Total Active Adventures: " + hero);
-            System.out.printf("%-10s %-10s %-10s %s", "Adventures", "Room", "Damage", "Treasure");
+            System.out.printf("%-10s %-10s %-10s %-10s %s", "Name","Adventures", "Damage", "Room", "Treasure");
             System.out.println("");
-            for(int i = 0; i < 4; i++){
-                System.out.printf("%-10s %-10s %-10s %s",adventures.get(i).getName(), Arrays.toString(adventures.get(i).getSpawn()), adventures.get(i).getHP(),adventures.get(i).getTreasure().toString());
-                System.out.println("");
-            }
+//            for(int i = 0; i < 4; i++){
+//                System.out.printf("%-10s %-10s %-10s %s",adventures.get(i).getName(), Arrays.toString(adventures.get(i).getSpawn()), adventures.get(i).getHP(),adventures.get(i).getTreasure().toString());
+//                System.out.println("");
+//            }
+            System.out.printf("%-10s %-10s %-10s %-10s %s", name, adventures.get(0).getName(), adventures.get(0).getHP(), Arrays.toString(adventures.get(0).getSpawn()), adventures.get(0).getTreasure().toString());
             System.out.println("");
 
 //            System.out.println("Brawler - " +adventures.get(0).getTreasure()+ " Treasures(s) - "+adventures.get(0).getHP()+" Damage");
@@ -540,12 +540,12 @@ public class GameEngine4 extends battle3 implements Observer {
 //            System.out.println("Creatures: "+ enemies);
 
             System.out.println("Total Active Creatures: " + enemies);
-            System.out.printf("%-10s %s", "Creatures", "Room");
-            System.out.println("");
-            for(int i = 0; i < 12; i++){
-                System.out.printf("%-10s %s",monsters.get(i).getName(), Arrays.toString(monsters.get(i).getSpawn()));
-                System.out.println("");
-            }
+//            System.out.printf("%-10s %s", "Creatures", "Room");
+//            System.out.println("");
+//            for(int i = 0; i < 12; i++){
+//                System.out.printf("%-10s %s",monsters.get(i).getName(), Arrays.toString(monsters.get(i).getSpawn()));
+//                System.out.println("");
+//            }
 
             //tracker takes in bytearrayoutput and returns a normal System.out()
             System.out.flush();
