@@ -10,10 +10,8 @@ public Integer start(){
         //pass all 4 adventures with their id's
         for(int i = 1; i < 5; i++){
             adventures.add(new Adventurers_stats4(i));
-
         }
-        List<Adventurers_stats4> nam =new ArrayList<Adventurers_stats4>();
-        List<String> nem = new List<String>;
+        List<String> nem = new ArrayList<String>();
         for(int i = 0; i< 4; i++){
             nem.add(adventures.get(i).getName());
          }
