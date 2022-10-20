@@ -20,13 +20,14 @@ public class GameEngine4 extends battle4 implements Observer {
     void run(){
         Unit_Test tes = new Unit_Test();
         //observer stuff
-        Logger4 observable = new Logger4(null);
+        Logger4 observable = Logger4.getInstance();
         GameEngine4 observer = new GameEngine4();
         observable.addObserver(observer);
 
         //initiate stuff
         Facility4 move = new Facility4();
         searchAndCombat4 look = new searchAndCombat4();
+        Factory make = new Factory();
 
         //initializing the game and game ending variables
         int money = 6;
@@ -53,7 +54,7 @@ public class GameEngine4 extends battle4 implements Observer {
         adventerur.pullMenu();
         String persona = scan.nextLine();
         adventerur.setStart(persona);
-        adventures.add(new Adventurers_stats4(adventerur.getStart()));
+        adventures.add(make.createA(adventerur.getStart()));
 
         //Chooses A name for their hero
         adventerur.name();
@@ -66,7 +67,7 @@ public class GameEngine4 extends battle4 implements Observer {
         //initializing 12 creatures
         for(int i = 0; i < 4; i++) {
             for (int k = 1; k <= 3; k++) {
-                monsters.add(new Creatures_stats4(k));
+                monsters.add(make.createC(k));
             }
         }
         //Set the spawn for all Creatures
@@ -123,7 +124,7 @@ public class GameEngine4 extends battle4 implements Observer {
             //The moment the hero leaves the room the condition is met
             if(!(Arrays.equals(adventures.get(0).getSpawn(), new int[]{0,1,1}))){
                 leftRoom = true;
-                System.out.println("bird left the house");
+//                System.out.println("bird left the house");
             }
 
             System.setOut(ps);
@@ -372,6 +373,9 @@ public class GameEngine4 extends battle4 implements Observer {
 
             System.out.println("Total Active Creatures: " + enemies);
 
+            // prints the direction the player can move
+            move.ifmove(adventures.get(0).getSpawn());
+
             //tracker takes in bytearrayoutput and returns a normal System.out()
             System.out.flush();
             System.setOut(old);
@@ -380,10 +384,11 @@ public class GameEngine4 extends battle4 implements Observer {
             baos.reset();
 
         }//end of while loop
+
         //logger write and create txt file
         observable.createFile(round);
         observable.writeFile(observable.getInputs());
 
-
+        scan.close();
     }
 }

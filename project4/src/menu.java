@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Scanner;
 public class menu {
 
+    //Adventurer id is stored
     private Integer id;
+    //Unique name the user inputs is stored
     private String names;
 
     //Shows all available adventurers
@@ -23,6 +25,7 @@ public class menu {
         // outputs characters to choose from
         System.out.println("chose a adventurer: " + nem);
     }
+    //Asks for a name inputs from the user
     public void name(){
         System.out.println("Choose a Name for your Adventure(ex: Bob, Ted): ");
     }
@@ -40,9 +43,13 @@ public class menu {
         }
         else if(input.equals("Thieves")) {
             id = 4;
+        }else{
+            System.out.println("Invalid");
+            id = 1;
         }
     }
 
+    //return id
     public Integer getStart(){
         return id;
     }

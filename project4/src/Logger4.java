@@ -2,6 +2,7 @@ import java.util.Observable;
 import java.io.File;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileWriter;   // Import the FileWriter class
+import java.util.logging.Logger;
 
 /*
 * Implement an Observer through java's library
@@ -10,6 +11,13 @@ import java.io.FileWriter;   // Import the FileWriter class
  */
 @Deprecated
 public class Logger4 extends Observable {
+
+    //Eager Instantiation Singleton
+    private static Logger4 instance = new Logger4(null);
+
+    //Instantiate tracker here
+    private Tracker pub = Tracker.getInstance();
+
     //Stores the data for Logger
     private String inputs;
     //Store the file name
@@ -56,8 +64,12 @@ public class Logger4 extends Observable {
             e.printStackTrace();
         }
     }
+
+    public static Logger4 getInstance(){
+        return instance;
+    }
     public void Tracker(String days){
         //Take data and print it to the terminal
-        System.out.println(days);
+        pub.publish(days);
     }
 }
