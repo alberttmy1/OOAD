@@ -3,15 +3,13 @@ import java.util.Scanner;
 // this is a example of polymorphism as its a class of movements and each character has its own version of how it moves
 public class Facility4 {
 // this class is an example of cohesion as it focuses on the location of charachte
-    public int[] heroMove(int[] heroPlace, String user_choice) {
-//        System.out.println("hero: " + Arrays.toString(heroPlace));
-//        int direction = (int) Math.floor(Math.random() * (2 - 0 + 1) + 0);
-//        int moveSpace = (int) Math.floor(Math.random() * (1 - 0 + 1) + 0);
+    public int[] heroMove(int[] heroPlace, String input) {
+
         int[] heroLoc = heroPlace;
 
         //heroLoc = {z,y,x}
 
-        if(user_choice == "south"){
+        if(input.equals("north")){
             // Checks if y is at the end room
             if (heroLoc[1] == 2) {
                 heroLoc[1] = heroLoc[1] - 1;
@@ -28,7 +26,7 @@ public class Facility4 {
                 return heroLoc;
             }
         }
-        if(user_choice == "north"){
+        if(input.equals("south")){
             // Checks if y is at the end room
             if (heroLoc[1] == 2) {
                 System.out.println("Invalid input");
@@ -45,7 +43,7 @@ public class Facility4 {
                 return heroLoc;
             }
         }
-        if(user_choice == "east"){
+        if(input.equals("east")){
             // checks if its at the most eastern room
             if (heroLoc[2] == 2) {
                 System.out.println("Invalid input");
@@ -62,7 +60,7 @@ public class Facility4 {
                 return heroLoc;
             }
         }
-        if(user_choice == "west"){
+        if(input.equals("west")){
             // checks if its at the most eastern room
             if (heroLoc[2] == 2) {
                 heroLoc[2] = heroLoc[2] - 1;
@@ -79,7 +77,7 @@ public class Facility4 {
                 return heroLoc;
             }
         }
-        if(user_choice == "up a level"){
+        if(input.equals("up a level")){
             if(heroLoc[1] == 1 && heroLoc[2] == 1){
                 // if at top floor
                 if (heroLoc[0] == 4) {
@@ -102,7 +100,7 @@ public class Facility4 {
                 ifmove(heroLoc);
             }
         }
-        if(user_choice == "down a level"){
+        if(input.equals("down a level")){
             if(heroLoc[1] == 1 && heroLoc[2] == 1){
                 // if at top floor
                 if (heroLoc[0] == 4) {
@@ -125,139 +123,6 @@ public class Facility4 {
                 ifmove(heroLoc);
             }
         }
-//        // if n/s
-//        if(direction == 0){
-//            // Checks if y is at the end room
-//            if (heroLoc[1] == 2) {
-//                // if S
-//                if (moveSpace == 0) {
-//                    heroLoc[1] = heroLoc[1] - 1;
-//                    return heroLoc;
-//                }
-//                //if north
-//                else{
-//                    heroMove(heroPlace);
-//                }
-//            }
-//            // Checks if y is at the beginning room
-//            else if (heroLoc[1] == 0){
-//
-//                // if S
-//                if (moveSpace == 0) {
-//                    heroMove(heroPlace);
-//                }
-//                // if N
-//                else{
-//                    heroLoc[1] = heroLoc[1] + 1;
-//                    return heroLoc;
-//                }
-//            }
-//            //if its in the middle it can move freely
-//            else if (heroLoc[1] == 1){
-//
-//                // if S
-//                if (moveSpace == 0) {
-//                    heroLoc[1] = heroLoc[1] - 1;
-//                    return heroLoc;
-//                }
-//                // if N
-//                else{
-//                    heroLoc[1] = heroLoc[1] + 1;
-//                    return heroLoc;
-//                }
-//            }
-//        }
-//        // if up or down levels
-//        else if(direction == 1){
-//            // if in center room
-//            if(heroLoc[1] == 1 && heroLoc[2] == 1){
-//                // if at top floor
-//                if (heroLoc[0] == 4) {
-//                    // if down
-//                    if (moveSpace == 0) {
-//                        heroLoc[0] = heroLoc[0] - 1;
-//                        return heroLoc;
-//                    }
-//                    //if up
-//                    else if (moveSpace == 1) {
-//                        heroMove(heroPlace);
-//                    }
-//                }
-//                // if at bottom floor
-//                else if (heroLoc[0] == 1) {
-//                    // if down
-//                    if (moveSpace == 0) {
-//                        heroMove(heroPlace);
-//
-//                    }
-//                    //if up
-//                    else if (moveSpace == 1) {
-//                        heroLoc[0] = heroLoc[0] + 1;
-//                        return heroLoc;
-//                    }
-//                }
-//                //if its floor 2 or 3 it can move freely
-//                else if (heroLoc[0] >= 2 || heroLoc[0] <= 3 ) {
-//                    // if down
-//                    if (moveSpace == 0) {
-//                        heroLoc[0] = heroLoc[0] - 1;
-//                        return heroLoc;
-//
-//                    }
-//                    //if up
-//                    else if (moveSpace == 1) {
-//                        heroLoc[0] = heroLoc[0] + 1;
-//                        return heroLoc;
-//                    }
-//                }
-//            }
-//            // if not in the center room
-//            else{
-//                heroMove(heroPlace);
-//            }
-//        }
-//        // if E/W
-//        else{
-//            // checks if its at the most eastern room
-//            if (heroLoc[2] == 2) {
-//                // if w
-//                if (moveSpace == 0) {
-//                    heroLoc[2] = heroLoc[2] - 1;
-//                    return heroLoc;
-//                }
-//                //if E
-//                else{
-//                    heroMove(heroPlace);
-//                }
-//            }
-//            // checks if its at the most western room
-//            else if (heroLoc[2] == 0){
-//
-//                // if W
-//                if (moveSpace == 0) {
-//                    heroMove(heroPlace);
-//                }
-//                // if E
-//                else{
-//                    heroLoc[2] = heroLoc[2] + 1;
-//                    return heroLoc;
-//                }
-//            }
-//            //if in middle room they can move freely
-//            else if (heroLoc[2] == 1){
-//
-//                // if W
-//                if(moveSpace == 0) {
-//                    heroLoc[2] = heroLoc[2] - 1;
-//                    return heroLoc;
-//                }
-//                // if E
-//                else{
-//                    heroLoc[2] = heroLoc[2] + 1;
-//                    return heroLoc;
-//                }
-//            }
-//        }
         return heroLoc;
     }
 
@@ -265,42 +130,43 @@ public class Facility4 {
         int[] heroLoc = heroPlace;
         Scanner reader = new Scanner(System.in);
         System.out.println("Chose a direction");
-        if (heroLoc[1] == 2){
-            System.out.println("south");
+        if (heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
+            System.out.println("up a level");
         }
-        if (heroLoc[1] == 0){
-            System.out.println("north");
-        }
-        if (heroLoc[1] == 1){
-            System.out.println("south");
-            System.out.println("north");
-        }
-        if (heroLoc[2] == 2){
-            System.out.println("west");
-        }
-        if (heroLoc[2] == 0){
-            System.out.println("east");
-        }
-        if (heroLoc[2] == 1){
-            System.out.println("west");
-            System.out.println("east");
-        }
-        if(heroLoc[1] == 1 && heroLoc[2] == 1){
-            if (heroLoc[0] == 4) {
-                System.out.println("down a level");
+        else{
+            if (heroLoc[1] == 2){
+                System.out.println("south");
             }
-            if (heroLoc[0] == 0) {
-                System.out.println("up a level");
+            if (heroLoc[1] == 0){
+                System.out.println("north");
             }
-            else if (heroLoc[0] >= 1 || heroLoc[0] <= 3 ) {
-                System.out.println("down a level");
-                System.out.println("up a level");
+            if (heroLoc[1] == 1){
+                System.out.println("south");
+                System.out.println("north");
+            }
+            if (heroLoc[2] == 2){
+                System.out.println("west");
+            }
+            if (heroLoc[2] == 0){
+                System.out.println("east");
+            }
+            if (heroLoc[2] == 1){
+                System.out.println("west");
+                System.out.println("east");
+            }
+            if(heroLoc[1] == 1 && heroLoc[2] == 1){
+                if (heroLoc[0] == 4) {
+                    System.out.println("down a level");
+                }
+                if (heroLoc[0] == 0) {
+                    System.out.println("up a level");
+                }
+                else if (heroLoc[0] >= 1 || heroLoc[0] <= 3 ) {
+                    System.out.println("down a level");
+                    System.out.println("up a level");
+                }
             }
         }
-        String input = reader.nextLine();
-        int[] res = heroMove(heroLoc, input);
-        reader.close();
-        return res;
     }
 
     // intailize treasure spawn
