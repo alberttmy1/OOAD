@@ -6,7 +6,7 @@ import java.util.*;
 
 public class GameEngine4 extends battle4 implements Observer {
 
-    Scanner scan = new Scanner(System.in);
+    public static final Scanner scan = new Scanner(System.in);
     battle4 attack = new battle4();
     @Deprecated
     private Logger4 gameUpdate;
@@ -18,7 +18,7 @@ public class GameEngine4 extends battle4 implements Observer {
     }
 
     void run(){
-
+        Unit_Test tes = new Unit_Test();
         //observer stuff
         Logger4 observable = new Logger4(null);
         GameEngine4 observer = new GameEngine4();
@@ -98,7 +98,21 @@ public class GameEngine4 extends battle4 implements Observer {
         *Continue to run until either they collect all the treasure(money), all the creatures(enemies),
         * or all the Adventures(hero) die
          */
-
+        tes.ch_type();
+        tes.ch_type2();
+        tes.ch_type3();
+        tes.ch_type4();
+        tes.cre_name();
+        tes.cre_name2();
+        tes.cre_name3();
+        tes.t_name();
+        tes.t_name2();
+        tes.t_name3();
+        tes.t_name4();
+        tes.t_name5();
+        tes.t_name6();
+        tes.ch_s();
+        tes.ch_hp();
         //Initialize User options
         Decision choice = new Decision();
         String options = "";
@@ -148,9 +162,10 @@ public class GameEngine4 extends battle4 implements Observer {
             //User interface commands with program
             choice.command();
             options = scan.nextLine();
-
+            // if fight
             if(options.equals("1")){
                 int count = 0;
+                // if runner
                 if(adventures.get(0).getID() == 3 ){
                     if (AMove && adventures.get(0).getHP() != 0) {
                         for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
@@ -160,7 +175,7 @@ public class GameEngine4 extends battle4 implements Observer {
                             }
                         }
                         if(moved){
-                            move.ifmove(adventures.get(0).getSpawn());
+//                            move.ifmove(adventures.get(0).getSpawn());
                             dir = scan.nextLine();
                             adventures.get(0).setSpawn(move.heroMove(adventures.get(0).getSpawn(), dir));
                         }
@@ -177,7 +192,7 @@ public class GameEngine4 extends battle4 implements Observer {
                                 }
                             }
                             if(moved){
-                                move.ifmove(adventures.get(0).getSpawn());
+//                                move.ifmove(adventures.get(0).getSpawn());
                                 dir = scan.nextLine();
                                 adventures.get(0).setSpawn(move.heroMove(adventures.get(0).getSpawn(), dir));
                             }
@@ -186,6 +201,7 @@ public class GameEngine4 extends battle4 implements Observer {
                 }
                 else{
                     //list that determines if an adventure is alive and not in combat then it can move
+                    // if player moves from a room= that has a active creature it takes damage
                     for(int k = 0; k < 12; k++){
                         if (Arrays.equals(adventures.get(0).getSpawn(), monsters.get(k).getSpawn()) && monsters.get(k).getHP() != 0 && adventures.get(0).getHP() != 0){
                             adventures.get(0).setHP(adventures.get(0).getHP() - 1);
@@ -206,14 +222,16 @@ public class GameEngine4 extends battle4 implements Observer {
                         }
                         if(moved){
                             //Print out menu
-                            move.ifmove(adventures.get(0).getSpawn());
+//                            move.ifmove(adventures.get(0).getSpawn());
                             dir = scan.nextLine();
                             adventures.get(0).setSpawn(move.heroMove(adventures.get(0).getSpawn(), dir));
                         }
                     }
                 }
 
-            }else if(options.equals("2")){
+            }
+            // if Search
+            else if(options.equals("2")){
                 //Search
                 for(int i = 0; i < 24; i++){
                     if(Arrays.equals(adventures.get(0).getSpawn(), treasures.get(i).getSpawn())){
@@ -242,10 +260,13 @@ public class GameEngine4 extends battle4 implements Observer {
                         }
                     }
                 }
-            }else if(options.equals("3")){
+            }
+            // if Celebrate
+            else if(options.equals("3")){
                 //Celebrate
                 System.out.println(adventures.get(0).getName()+ " "+adventerur.getNames()+": " + attack.party());
             }
+            // if fight
             if(options.equals("4")){
                 //fight
                 for(int k = 0; k < 12; k++){

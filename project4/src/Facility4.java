@@ -9,6 +9,7 @@ public class Facility4 {
 
         //heroLoc = {z,y,x}
 
+// depending on the user imput it will move in that direction
         if(input.equals("north")){
             // Checks if y is at the end room
             if (heroLoc[1] == 2) {
@@ -17,6 +18,11 @@ public class Facility4 {
             }
             // Checks if y is at the beginning room
             else if (heroLoc[1] == 0){
+                // if input is invalid
+                System.out.println("Invalid input");
+                ifmove(heroLoc);
+            }
+            else if (heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
                 System.out.println("Invalid input");
                 ifmove(heroLoc);
             }
@@ -37,6 +43,10 @@ public class Facility4 {
                 heroLoc[1] = heroLoc[1] + 1;
                 return heroLoc;
             }
+            else if (heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
+                System.out.println("Invalid input");
+                ifmove(heroLoc);
+            }
             //if its in the middle it can move freely
             else if (heroLoc[1] == 1){
                 heroLoc[1] = heroLoc[1] + 1;
@@ -54,6 +64,10 @@ public class Facility4 {
                 heroLoc[2] = heroLoc[2] + 1;
                 return heroLoc;
             }
+            else if (heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
+                System.out.println("Invalid input");
+                ifmove(heroLoc);
+            }
             //if in middle room they can move freely
             else if (heroLoc[2] == 1){
                 heroLoc[2] = heroLoc[2] + 1;
@@ -68,6 +82,10 @@ public class Facility4 {
             }
             // checks if its at the most western room
             else if (heroLoc[2] == 0){
+                System.out.println("Invalid input");
+                ifmove(heroLoc);
+            }
+            else if (heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
                 System.out.println("Invalid input");
                 ifmove(heroLoc);
             }
@@ -125,7 +143,7 @@ public class Facility4 {
         }
         return heroLoc;
     }
-
+    // determines what direction a player can move depending on its location
     public void ifmove(int[] heroPlace){
         int[] heroLoc = heroPlace;
         System.out.println("Chose a direction");
