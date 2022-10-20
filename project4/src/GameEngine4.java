@@ -2,12 +2,11 @@ import jdk.jshell.execution.LoaderDelegate;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Observable;
-import java.util.Observer;
+import java.util.*;
 
 public class GameEngine4 extends battle4 implements Observer {
+
+    Scanner scan = new Scanner(System.in);
     battle4 attack = new battle4();
     @Deprecated
     private Logger4 gameUpdate;
@@ -51,16 +50,15 @@ public class GameEngine4 extends battle4 implements Observer {
         menu adventerur = new menu();
 
         //pass chosen adventure with their id
-        adventures.add(new Adventurers_stats4(adventerur.start()));
+        adventerur.pullMenu();
+        String persona = scan.nextLine();
+        adventerur.setStart(persona);
+        adventures.add(new Adventurers_stats4(adventerur.getStart()));
 
         //Chooses A name for their hero
-        String name = "";
-        name = adventerur.name();
-
-        //pass all 4 adventures with their id's
-//        for(int i = 1; i < 5; i++){
-//            adventures.add(new Adventurers_stats4(i));
-//        }
+        adventerur.name();
+        String name = scan.nextLine();
+        adventerur.setNames(name);
 
         //array to hold all creatures
         ArrayList<Creatures_stats4> monsters = new ArrayList<Creatures_stats4>();
@@ -104,87 +102,23 @@ public class GameEngine4 extends battle4 implements Observer {
         //Initialize User options
         Decision choice = new Decision();
         String options = "";
+        String dir = "";
 
         while(hero > 0 && roomEnd > 0){
 
             //The moment the hero leaves the room the condition is met
-            if(adventures.get(0).getSpawn() != new int[] {0,1,1}){
+            if(!(Arrays.equals(adventures.get(0).getSpawn(), new int[]{0,1,1}))){
                 leftRoom = true;
+                System.out.println("bird left the house");
             }
 
             System.setOut(ps);
             //Boolean variables to track if an adventure can move or not
             boolean AMove = true;
-//            boolean SMove = true;
-//            boolean RMove = true;
-//            boolean TMove = true;
 
             //Print out the number of turns
             System.out.println("Tracker Turn: " + round);
             System.out.println("");
-            //Prints out the entrance floor layout and checks if anyone is in there
-            for (int i = 0; i < 1; i++) {
-                System.out.print(test[i][0][0] + "-" + test[i][0][1] + "-" + test[i][0][2] + ": ");
-                if (Arrays.equals(adventures.get(0).getSpawn(), test[i][0])) {
-                    System.out.print(name);
-                }else{
-                    System.out.print("");
-                }
-            }
-            System.out.println("");
-
-            //Print out floors 1-4
-            for (int j = 1; j < 5; j++) {
-                for (int k = 0; k < 9; k++) {
-                    if (k % 3 == 0) {
-                        System.out.println("");
-                    }
-                    String coor = test[j][k][0] + "-" + test[j][k][1] + "-" + test[j][k][2] + ": ";
-                    if (Arrays.equals(adventures.get(0).getSpawn(), test[j][k])) {
-                        temp += name + ", ";
-                    }
-                    for (int m = 0; m < 12; m++) {
-                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 1) {
-                            temp += "OB, ";
-                        }
-                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 2) {
-                            temp += "SE, ";
-                        }
-                        if (Arrays.equals(monsters.get(m).getSpawn(), test[j][k]) && monsters.get(m).getID() == 3) {
-                            temp += "BL, ";
-                        }
-                    }
-                    for (int i = 0; i < 24; i++) {
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 1) {
-                            temp += "SW, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 2) {
-                            temp += "GE, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 3) {
-                            temp += "AR, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 4) {
-                            temp += "PO, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 5) {
-                            temp += "TR, ";
-                        }
-                        if (Arrays.equals(treasures.get(i).getSpawn(), test[j][k]) && treasures.get(i).getID() == 6) {
-                            temp += "POT, ";
-                        }
-                    }
-
-                    System.out.printf("%s %-15s", coor, temp);
-                    temp = "";
-                }
-                System.out.println("");
-            }
-
-            System.out.println("");
-
-            //User interface commands with program
-            options = choice.command();
 
             // Checks to see if a creature can move
             for (int i = 0; i < 12; i++) {
@@ -211,32 +145,41 @@ public class GameEngine4 extends battle4 implements Observer {
             }
 
             boolean moved = true;
+            //User interface commands with program
+            choice.command();
+            options = scan.nextLine();
 
-            if(options == "1"){
+            if(options.equals("1")){
                 int count = 0;
                 if(adventures.get(0).getID() == 3 ){
                     if (AMove && adventures.get(0).getHP() != 0) {
                         for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
-                            if (adventures.get(0).getTreasure().get(i) == "Teleport") {
+                            if (adventures.get(0).getTreasure().get(i).equals("Teleport")) {
                                 adventures.get(0).setSpawn(move.teleport());
                                 moved = false;
                             }
                         }
                         if(moved){
-                            adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
+                            move.ifmove(adventures.get(0).getSpawn());
+                            dir = scan.nextLine();
+                            adventures.get(0).setSpawn(move.heroMove(adventures.get(0).getSpawn(), dir));
                         }
                     }
-                    options = choice.command();
-                    if(options == "1"){
+                    choice.command();
+                    options = scan.nextLine();
+
+                    if(options.equals("1")){
                         if (AMove && adventures.get(0).getHP() != 0) {
                             for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
-                                if (adventures.get(0).getTreasure().get(i) == "Teleport") {
+                                if (adventures.get(0).getTreasure().get(i).equals("Teleport")) {
                                     adventures.get(0).setSpawn(move.teleport());
                                     moved = false;
                                 }
                             }
                             if(moved){
-                                adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
+                                move.ifmove(adventures.get(0).getSpawn());
+                                dir = scan.nextLine();
+                                adventures.get(0).setSpawn(move.heroMove(adventures.get(0).getSpawn(), dir));
                             }
                         }
                     }
@@ -256,18 +199,21 @@ public class GameEngine4 extends battle4 implements Observer {
 
                     if (AMove && adventures.get(0).getHP() != 0) {
                         for(int i = 0; i < adventures.get(0).getTreasure().size(); i++) {
-                            if (adventures.get(0).getTreasure().get(i) == "Teleport") {
+                            if (adventures.get(0).getTreasure().get(i).equals("Teleport")) {
                                 adventures.get(0).setSpawn(move.teleport());
                                 moved = false;
                             }
                         }
                         if(moved){
-                            adventures.get(0).setSpawn(move.ifmove(adventures.get(0).getSpawn()));
+                            //Print out menu
+                            move.ifmove(adventures.get(0).getSpawn());
+                            dir = scan.nextLine();
+                            adventures.get(0).setSpawn(move.heroMove(adventures.get(0).getSpawn(), dir));
                         }
                     }
                 }
 
-            }else if((options == "2")){
+            }else if(options.equals("2")){
                 //Search
                 for(int i = 0; i < 24; i++){
                     if(Arrays.equals(adventures.get(0).getSpawn(), treasures.get(i).getSpawn())){
@@ -296,11 +242,11 @@ public class GameEngine4 extends battle4 implements Observer {
                         }
                     }
                 }
-            }else if(options == "3"){
+            }else if(options.equals("3")){
                 //Celebrate
-                System.out.println(adventures.get(0).getName()+ " "+name+": " + attack.party());
+                System.out.println(adventures.get(0).getName()+ " "+adventerur.getNames()+": " + attack.party());
             }
-            if(options == "4"){
+            if(options.equals("4")){
                 //fight
                 for(int k = 0; k < 12; k++){
                     if (Arrays.equals(adventures.get(0).getSpawn(), monsters.get(k).getSpawn()) && monsters.get(k).getHP() != 0 && adventures.get(0).getHP() != 0){
@@ -385,7 +331,7 @@ public class GameEngine4 extends battle4 implements Observer {
             System.out.println("");
 
             //Check to see if the hero comes back to start
-            if(leftRoom == true && adventures.get(0).getSpawn() == new int[] {0,1,1}){
+            if(leftRoom == true && Arrays.equals(adventures.get(0).getSpawn(), new int[] {0,1,1})){
                 if(enemies == 0 || money == 0){
                     System.out.println("You won");
                     roomEnd = 0;
@@ -403,23 +349,7 @@ public class GameEngine4 extends battle4 implements Observer {
             System.out.printf("%-10s %-10s %-10s %-10s %s", adventerur.getNames(), adventures.get(0).getName(), adventures.get(0).getHP(), Arrays.toString(adventures.get(0).getSpawn()), adventures.get(0).getTreasure().toString());
             System.out.println("");
 
-//            System.out.println("Brawler - " +adventures.get(0).getTreasure()+ " Treasures(s) - "+adventures.get(0).getHP()+" Damage");
-//            System.out.println("Sneaker - " +adventures.get(1).getTreasure()+ " Treasures(s) - " +adventures.get(1).getHP()+" Damage");
-//            System.out.println("Runner - " +adventures.get(2).getTreasure()+ " Treasures(s) - " +adventures.get(2).getHP()+" Damage");
-//            System.out.println("Thief - " +adventures.get(3).getTreasure()+ " Treasures(s) - "+adventures.get(3).getHP()+" Damage");
-//            System.out.println("");
-//
-//            System.out.println("Hero: "+ hero);
-//            System.out.println("Treasure: " + money);
-//            System.out.println("Creatures: "+ enemies);
-
             System.out.println("Total Active Creatures: " + enemies);
-//            System.out.printf("%-10s %s", "Creatures", "Room");
-//            System.out.println("");
-//            for(int i = 0; i < 12; i++){
-//                System.out.printf("%-10s %s",monsters.get(i).getName(), Arrays.toString(monsters.get(i).getSpawn()));
-//                System.out.println("");
-//            }
 
             //tracker takes in bytearrayoutput and returns a normal System.out()
             System.out.flush();
@@ -432,13 +362,7 @@ public class GameEngine4 extends battle4 implements Observer {
         //logger write and create txt file
         observable.createFile(round);
         observable.writeFile(observable.getInputs());
-//        if(hero == 0){
-//            return 0;
-//        }else if(enemies == 0){
-//            return 1;
-//        }else{
-//            return 2;
-//        }
+
 
     }
 }

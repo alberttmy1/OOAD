@@ -126,9 +126,8 @@ public class Facility4 {
         return heroLoc;
     }
 
-    public int [] ifmove(int[] heroPlace){
+    public void ifmove(int[] heroPlace){
         int[] heroLoc = heroPlace;
-        Scanner reader = new Scanner(System.in);
         System.out.println("Chose a direction");
         if (heroLoc[0] == 0 && heroLoc[1] == 1 && heroLoc[2] == 1){
             System.out.println("up a level");

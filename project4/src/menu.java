@@ -1,9 +1,42 @@
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Arrays;
 public class menu {
-public Integer start(){
+
+    private Integer id;
+    private String names;
+//    public Integer start(String input){
+//        //initialization of the characters
+//        ArrayList<Adventurers_stats4> adventures = new ArrayList<Adventurers_stats4>();
+//
+//        //pass all 4 adventures with their id's
+//        for(int i = 1; i < 5; i++){
+//            adventures.add(new Adventurers_stats4(i));
+//        }
+//        List<String> nem = new ArrayList<String>();
+//        for(int i = 0; i< 4; i++){
+//            nem.add(adventures.get(i).getName());
+//         }
+//
+//        int id = 0;
+//        System.out.println("chose a adventurer: " + nem);
+//        if(input.equals("Brawlers")) {
+//            id = 1;
+//        }
+//        else if(input.equals("Sneakers")) {
+//            id = 2;
+//        }
+//        else if(input.equals("Runners")) {
+//            id = 3;
+//        }
+//        else if(input.equals("Thieves")) {
+//            id = 4;
+//        }
+//         return id;
+//    }
+
+    public void pullMenu(){
         //initialization of the characters
         ArrayList<Adventurers_stats4> adventures = new ArrayList<Adventurers_stats4>();
 
@@ -14,37 +47,35 @@ public Integer start(){
         List<String> nem = new ArrayList<String>();
         for(int i = 0; i< 4; i++){
             nem.add(adventures.get(i).getName());
-         }
-
-        int id = 0;
-        Scanner reader = new Scanner(System.in);
+        }
         System.out.println("chose a adventurer: " + nem);
-        String input = reader.nextLine();
-        if(input == "Brawlers") {
+    }
+    public void name(){
+        System.out.println("Choose a Name for your Adventure(ex: Bob, Ted): ");
+    }
+
+    public void setStart(String input){
+        if(input.equals("Brawlers")) {
             id = 1;
         }
-        else if(input == "Sneakers") {
+        else if(input.equals("Sneakers")) {
             id = 2;
         }
-        else if(input == "Runners") {
+        else if(input.equals("Runners")) {
             id = 3;
         }
-        else if(input == "Thieves") {
+        else if(input.equals("Thieves")) {
             id = 4;
         }
-        reader.close();
+    }
+
+    public Integer getStart(){
         return id;
     }
-    public String name(){
-        Scanner sub = new Scanner(System.in);
-        System.out.println("Choose a Name for your Adventure(ex: Bob, Ted): ");
-        // print the next line
-//        System.out.println("" + sub.nextLine());
-        String pub = "";
-        if(sub.hasNextLine()){
-            pub = sub.nextLine();
-        }
-        sub.close();
-        return pub;
+    public void setNames(String in){
+        names = in;
+    }
+    public String getNames(){
+        return names;
     }
 }
