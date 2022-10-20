@@ -1,0 +1,424 @@
+nullTracker Turn: 0
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: Bob
+
+1-0-0:                 1-0-1:  SE,            1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  GE, SW,        
+1-2-0:  AR,            1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  BL, POT, POT,  2-2-1:  SW,            2-2-2:  OB, POT,       
+
+3-0-0:  BL,            3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  BL, SE, SW,    
+3-2-0:  AR,            3-2-1:                 3-2-2:  BL, GE,        
+
+4-0-0:                 4-0-1:  OB,            4-0-2:                 
+4-1-0:                 4-1-1:                 4-1-2:  OB, PO,        
+4-2-0:  TR,            4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   12         [0, 1, 1]  []
+Total Active Creatures: 12
+Chose a direction
+up a level
+Tracker Turn: 1
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:  BL, SE,        1-0-2:  SW,            
+1-1-0:                 1-1-1:  Bob,           1-1-2:  GE, SW,        
+1-2-0:  AR,            1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  BL, GE, PO,    2-0-1:  OB,            2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  BL, PO,        2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:  OB,            4-0-1:  OB,            4-0-2:                 
+4-1-0:                 4-1-1:  BL,            4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   12         [1, 1, 1]  []
+Total Active Creatures: 12
+Chose a direction
+south
+north
+west
+east
+down a level
+up a level
+Tracker Turn: 2
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:  BL,            1-1-1:  SE,            1-1-2:  Bob, GE, SW,   
+1-2-0:  AR,            1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  GE, PO,        2-0-1:  BL,            2-0-2:  BL, OB, SE,    
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:  BL,            3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:                 4-0-1:                 4-0-2:                 
+4-1-0:                 4-1-1:                 4-1-2:  OB, PO,        
+4-2-0:  OB, TR,        4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   11         [1, 1, 2]  []
+Total Active Creatures: 12
+Chose a direction
+south
+north
+west
+Tracker Turn: 3
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+Nothing Happened
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  Bob, SE, SW,   
+1-2-0:  AR,            1-2-1:  BL,            1-2-2:  TR, POT,       
+
+2-0-0:  GE, PO,        2-0-1:  OB,            2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  BL, PO,        2-1-2:  PO,            
+2-2-0:  BL, POT, POT,  2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:                 4-0-1:  OB,            4-0-2:                 
+4-1-0:                 4-1-1:                 4-1-2:  PO,            
+4-2-0:  OB, BL, TR,    4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   11         [1, 1, 2]  [Gem]
+Total Active Creatures: 12
+Chose a direction
+south
+north
+west
+Tracker Turn: 4
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  BL, BL, SW,    
+1-1-0:  BL,            1-1-1:                 1-1-2:  Bob, SE, SW,   
+1-2-0:  AR,            1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, OB, AR,    2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:  OB,            4-0-1:  OB,            4-0-2:  BL,            
+4-1-0:                 4-1-1:                 4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   10         [1, 1, 2]  [Gem]
+Total Active Creatures: 12
+Chose a direction
+south
+north
+west
+Tracker Turn: 5
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:  BL,            1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  Bob, SW,       
+1-2-0:  AR,            1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  BL, SE,        
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  OB, PO,        
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:  BL,            3-2-2:  GE,            
+
+4-0-0:  OB,            4-0-1:                 4-0-2:                 
+4-1-0:                 4-1-1:                 4-1-2:  OB, PO,        
+4-2-0:  BL, TR,        4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   10         [1, 1, 2]  [Gem]
+Total Active Creatures: 11
+Chose a direction
+south
+north
+west
+Tracker Turn: 6
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+Nothing Happened
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  Bob, SW,       
+1-2-0:  BL, AR,        1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  OB, GE, PO,    2-0-1:  BL,            2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  BL, SW,        2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  BL, GE,        
+
+4-0-0:  OB,            4-0-1:                 4-0-2:  OB,            
+4-1-0:                 4-1-1:                 4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   10         [1, 1, 2]  [Gem]
+Total Active Creatures: 11
+Chose a direction
+south
+north
+west
+Tracker Turn: 7
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+Nothing Happened
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:  BL,            1-1-1:                 1-1-2:  Bob, SW,       
+1-2-0:  AR,            1-2-1:                 1-2-2:  TR, POT,       
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  OB, SE,        
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:  BL,            3-0-2:  AR,            
+3-1-0:  BL,            3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:                 4-0-1:                 4-0-2:                 
+4-1-0:  OB, OB,        4-1-1:                 4-1-2:  OB, PO,        
+4-2-0:  BL, TR,        4-2-1:  GE, TR,        4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   10         [1, 1, 2]  [Gem]
+Total Active Creatures: 11
+Chose a direction
+south
+north
+west
+Tracker Turn: 8
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  SW,            
+1-2-0:  AR,            1-2-1:                 1-2-2:  Bob, TR, POT,  
+
+2-0-0:  OB, GE, PO,    2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  BL, POT, POT,  2-2-1:  SW,            2-2-2:  BL, POT,       
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:  BL,            3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:                 4-0-1:  OB, BL,        4-0-2:  OB,            
+4-1-0:                 4-1-1:                 4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   10         [1, 2, 2]  [Gem]
+Total Active Creatures: 11
+Chose a direction
+south
+west
+Tracker Turn: 9
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+Nothing Happened
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  BL, BL, SW,    
+1-2-0:  AR,            1-2-1:                 1-2-2:  Bob, TR, POT,  
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  OB, SW,        2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:  OB, OB,        4-0-1:  OB,            4-0-2:                 
+4-1-0:                 4-1-1:                 4-1-2:  PO,            
+4-2-0:  BL, BL, TR,    4-2-1:  GE, TR,        4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   10         [1, 2, 2]  [Gem]
+Total Active Creatures: 11
+Chose a direction
+south
+west
+Tracker Turn: 10
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  SW,            
+1-2-0:  BL, AR,        1-2-1:                 1-2-2:  Bob,           
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  OB, SW,        2-2-2:  POT,           
+
+3-0-0:  BL,            3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:  BL,            3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  BL, GE,        
+
+4-0-0:                 4-0-1:                 4-0-2:                 
+4-1-0:  OB,            4-1-1:                 4-1-2:  PO,            
+4-2-0:  OB, TR,        4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   9          [1, 2, 2]  [Gem, Trap, Potion]
+Total Active Creatures: 11
+Chose a direction
+south
+west
+Tracker Turn: 11
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+Brawlers Bob: Shout, Spin, Dance, 
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  SW,            
+1-2-0:  AR,            1-2-1:                 1-2-2:  Bob,           
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, BL, AR,    2-1-1:  BL, PO,        2-1-2:  OB, PO,        
+2-2-0:  POT, POT,      2-2-1:  BL, SW,        2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:  BL, OB,        4-0-1:  OB,            4-0-2:  OB,            
+4-1-0:                 4-1-1:                 4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  GE, TR,        4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   9          [1, 2, 2]  [Gem, Trap, Potion]
+Total Active Creatures: 11
+Chose a direction
+south
+west
+Tracker Turn: 12
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:  BL,            1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  Bob, SW,       
+1-2-0:  AR,            1-2-1:  BL, BL,        1-2-2:                 
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  OB, POT,       
+
+3-0-0:                 3-0-1:                 3-0-2:  BL, AR,        
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:                 4-0-1:  OB,            4-0-2:                 
+4-1-0:  OB,            4-1-1:                 4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  OB, GE, TR,    4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   9          [1, 1, 2]  [Gem, Trap, Potion]
+Total Active Creatures: 11
+Chose a direction
+south
+north
+west
+Tracker Turn: 13
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: 
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:  BL, BL,        1-1-1:  Bob,           1-1-2:  SW,            
+1-2-0:  AR,            1-2-1:                 1-2-2:                 
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, AR,        2-1-1:  PO,            2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  OB, POT,       
+
+3-0-0:                 3-0-1:                 3-0-2:  BL, AR,        
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:  BL,            3-2-2:  GE,            
+
+4-0-0:                 4-0-1:                 4-0-2:                 
+4-1-0:  OB,            4-1-1:                 4-1-2:  PO,            
+4-2-0:  TR,            4-2-1:  OB, OB, GE, TR, 4-2-2:  TR,            
+
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   9          [1, 1, 1]  [Gem, Trap, Potion]
+Total Active Creatures: 11
+Chose a direction
+south
+north
+west
+east
+down a level
+up a level
+Tracker Turn: 14
+
+What command would you like to execute 1, 2, 3 or 4:  Move(1), Search(2), Celebrate(3), Fight(4),
+0-1-1: Bob
+
+1-0-0:                 1-0-1:                 1-0-2:  SW,            
+1-1-0:                 1-1-1:                 1-1-2:  BL, SW,        
+1-2-0:  AR,            1-2-1:                 1-2-2:                 
+
+2-0-0:  GE, PO,        2-0-1:                 2-0-2:  SE,            
+2-1-0:  SE, OB, BL, AR, 2-1-1:  BL, PO,        2-1-2:  PO,            
+2-2-0:  POT, POT,      2-2-1:  SW,            2-2-2:  POT,           
+
+3-0-0:                 3-0-1:                 3-0-2:  AR,            
+3-1-0:                 3-1-1:                 3-1-2:  SE, SW,        
+3-2-0:  AR,            3-2-1:                 3-2-2:  GE,            
+
+4-0-0:  OB,            4-0-1:                 4-0-2:                 
+4-1-0:                 4-1-1:                 4-1-2:  BL, PO,        
+4-2-0:  TR,            4-2-1:  OB, OB, GE, TR, 4-2-2:  TR,            
+
+You lost
+Name       Adventures Damage     Room       Treasure
+Bob        Brawlers   9          [0, 1, 1]  [Gem, Trap, Potion]
+Total Active Creatures: 11
+Chose a direction
+up a level
